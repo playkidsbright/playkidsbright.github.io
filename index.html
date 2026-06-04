@@ -17,7 +17,6 @@ body{font-family:'Nunito',sans-serif;background:linear-gradient(180deg,#d4eef8 0
 .fs{position:fixed;pointer-events:none;z-index:0;animation:tw 2.5s ease-in-out infinite;}
 .f1{top:2%;left:8%;font-size:18px;}.f2{top:8%;right:16%;font-size:14px;animation-delay:0.3s;}.f3{top:14%;left:52%;font-size:20px;animation-delay:0.6s;}.f4{top:21%;left:22%;font-size:15px;animation-delay:0.9s;}.f5{top:28%;right:10%;font-size:17px;animation-delay:0.2s;}.f6{top:41%;left:4%;font-size:19px;animation-delay:0.5s;}.f7{top:54%;left:32%;font-size:14px;animation-delay:1.3s;}.f8{top:68%;right:20%;font-size:15px;animation-delay:1s;}
 @keyframes tw{0%,100%{opacity:0.25;transform:scale(0.8) rotate(0);}50%{opacity:1;transform:scale(1.3) rotate(20deg);}}
-/* TOP BAR */
 .top-bar{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:8px 16px;background:rgba(255,255,255,0.5);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);}
 .logo-link{display:flex;align-items:center;gap:6px;cursor:pointer;text-decoration:none;}
 .logo-link img{height:32px;border-radius:50%;}
@@ -29,7 +28,6 @@ body{font-family:'Nunito',sans-serif;background:linear-gradient(180deg,#d4eef8 0
 .sm-top .yt{color:#FF0000;}.sm-top .ig{color:#E1306C;}.sm-top .fb{color:#1877F2;}.sm-top .pin{color:#BD081C;}.sm-top .threads{color:#000;}.sm-top .xtwitter{color:#000;}
 .squirrel-badge{display:flex;align-items:center;gap:4px;background:rgba(200,160,100,0.15);padding:4px 12px;border-radius:20px;font-weight:700;color:#b07840;font-size:14px;}
 .squirrel-badge img{width:20px;height:20px;border-radius:50%;}
-/* BOTTOM BAR */
 .bottom-bar{position:fixed;bottom:0;left:0;right:0;z-index:100;display:flex;align-items:flex-end;justify-content:center;padding:8px 16px 10px;background:rgba(255,255,255,0.6);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,0.5);}
 .bottom-btns{display:flex;align-items:center;gap:14px;position:relative;}
 .squirrel-bar{position:absolute;left:-52px;bottom:4px;width:50px;height:50px;pointer-events:none;z-index:5;}
@@ -41,25 +39,24 @@ body{font-family:'Nunito',sans-serif;background:linear-gradient(180deg,#d4eef8 0
 .bottom-btn.gift-btn .b-icon{background:linear-gradient(135deg,#e85d6f,#d44e60);color:white;}
 .bottom-btn.settings-btn .b-icon{background:rgba(180,180,180,0.4);color:#777;}
 .bottom-btn.share-btn2 .b-icon{background:rgba(100,180,230,0.4);color:#4a90b8;}
-/* PAGES */
 .page{display:none;flex-direction:column;align-items:center;padding:65px 20px 20px;min-height:calc(100vh - 80px);position:relative;z-index:1;text-align:center;}
 .page.active{display:flex;animation:slideUp 0.4s ease-out;}
 @keyframes slideUp{0%{transform:translateY(30px);opacity:0;}100%{transform:translateY(0);opacity:1;}}
-/* NAV ARROWS */
-.page-arrows{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:400px;margin-bottom:12px;}
-.arrow-btn{display:flex;flex-direction:column;align-items:center;gap:2px;border:none;border-radius:16px;background:rgba(255,255,255,0.7);cursor:pointer;font-size:14px;color:#999;padding:8px 14px;transition:transform 0.2s;font-family:'Nunito',sans-serif;font-weight:700;}
-.arrow-btn:hover{transform:translateY(-50%) scale(1.1);}
-.arrow-btn .arr-text{font-size:10px;color:#bbb;}
-.page-title-mid{font-family:'Baloo 2',cursive;font-size:22px;color:#555;}
-/* SQUIRREL VIDEO CIRCLE */
-.sq-circle{width:120px;height:120px;border-radius:50%;background:white;box-shadow:0 4px 15px rgba(0,0,0,0.08);border:3px solid rgba(168,212,188,0.4);display:flex;align-items:center;justify-content:center;overflow:hidden;margin:10px auto;}
-.sq-circle video,.sq-circle img{width:100%;height:100%;object-fit:cover;}
-.sq-circle-sm{width:90px;height:90px;border-radius:50%;background:white;box-shadow:0 3px 12px rgba(0,0,0,0.06);border:3px solid rgba(244,184,196,0.4);display:flex;align-items:center;justify-content:center;overflow:hidden;margin:8px auto;}
-.sq-circle-sm video,.sq-circle-sm img{width:100%;height:100%;object-fit:cover;}
+/* SQUIRREL ROUNDED SQUARE */
+.sq-box{width:130px;height:130px;border-radius:20px;background:white;box-shadow:0 4px 15px rgba(0,0,0,0.08);border:3px solid rgba(168,212,188,0.4);display:flex;align-items:center;justify-content:center;overflow:hidden;margin:10px auto;}
+.sq-box video,.sq-box img{width:100%;height:100%;object-fit:cover;}
+.sq-box-sm{width:100px;height:100px;border-radius:16px;background:white;box-shadow:0 3px 12px rgba(0,0,0,0.06);border:3px solid rgba(244,184,196,0.4);display:flex;align-items:center;justify-content:center;overflow:hidden;margin:8px auto;}
+.sq-box-sm video,.sq-box-sm img{width:100%;height:100%;object-fit:cover;}
+/* NAV ARROWS AT BOTTOM */
+.nav-bottom{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:20px;width:100%;max-width:400px;}
+.nav-btn{display:flex;align-items:center;gap:6px;border:none;border-radius:20px;padding:12px 24px;font-family:'Baloo 2',cursive;font-size:16px;cursor:pointer;transition:transform 0.2s;font-weight:700;}
+.nav-btn:hover{transform:scale(1.05);}
+.nav-btn.back-btn{background:rgba(255,255,255,0.7);color:#999;}
+.nav-btn.next-btn{background:#5cba8c;color:white;}
+.page-title{font-family:'Baloo 2',cursive;font-size:24px;color:#555;margin-bottom:10px;}
 /* LANDING */
 .landing{justify-content:center;gap:6px;}
-.rainbow-title{font-family:'Baloo 2',cursive;font-size:52px;line-height:1.1;margin-bottom:0;}
-.squirrel-hero{width:250px;filter:drop-shadow(0 8px 20px rgba(0,0,0,0.1));margin:10px 0;}
+.rainbow-title{font-family:'Baloo 2',cursive;font-size:48px;line-height:1.15;margin-bottom:4px;}
 .tagline{color:#8a8a8a;font-size:15px;font-weight:700;margin:6px 0;}
 .sm-icons{display:flex;gap:14px;align-items:center;margin-top:6px;}
 .sm-icons a{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;background:rgba(255,255,255,0.7);box-shadow:0 2px 8px rgba(0,0,0,0.06);transition:transform 0.2s;font-size:16px;}
@@ -71,16 +68,20 @@ body{font-family:'Nunito',sans-serif;background:linear-gradient(180deg,#d4eef8 0
 .share-btn,.subscribe-btn{padding:8px 18px;border-radius:20px;border:none;font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;cursor:pointer;transition:transform 0.2s;}
 .share-btn{background:rgba(255,255,255,0.8);color:#555;}
 .subscribe-btn{background:#e04050;color:white;}
-/* AGE GRID */
+/* AGE GRID COLORFUL */
 .age-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:320px;width:100%;}
-.age-card{background:rgba(255,255,255,0.7);border-radius:20px;padding:20px 10px;cursor:pointer;transition:transform 0.2s;box-shadow:0 4px 15px rgba(0,0,0,0.06);text-align:center;}
+.age-card{border-radius:20px;padding:20px 10px;cursor:pointer;transition:transform 0.2s;box-shadow:0 4px 15px rgba(0,0,0,0.06);text-align:center;}
 .age-card:hover{transform:scale(1.05);}
+.age-card.c1{background:rgba(168,230,207,0.35);border:2px solid rgba(168,230,207,0.5);}
+.age-card.c2{background:rgba(244,184,196,0.3);border:2px solid rgba(244,184,196,0.5);}
+.age-card.c3{background:rgba(184,212,232,0.35);border:2px solid rgba(184,212,232,0.5);}
+.age-card.c4{background:rgba(245,212,160,0.35);border:2px solid rgba(245,212,160,0.5);}
 .age-card .emoji{font-size:32px;margin-bottom:6px;}
-.age-card .label{font-family:'Baloo 2',cursive;font-size:18px;color:#a8d4bc;}
+.age-card .label{font-family:'Baloo 2',cursive;font-size:18px;color:#777;}
 .age-card .desc{font-size:11px;color:#b5b5b5;margin-top:2px;}
-/* CATEGORIES */
+/* CATEGORIES COLORFUL */
 .cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:340px;width:100%;}
-.cat-card{background:rgba(255,255,255,0.7);border-radius:20px;padding:16px 10px;cursor:pointer;transition:transform 0.2s;box-shadow:0 4px 15px rgba(0,0,0,0.06);text-align:center;position:relative;}
+.cat-card{border-radius:20px;padding:16px 10px;cursor:pointer;transition:transform 0.2s;box-shadow:0 4px 15px rgba(0,0,0,0.06);text-align:center;position:relative;}
 .cat-card:hover{transform:scale(1.05);}
 .cat-card.locked{opacity:0.45;cursor:not-allowed;}.cat-card.locked:hover{transform:none;}
 .cat-card .emoji{font-size:28px;margin-bottom:4px;}
@@ -89,6 +90,13 @@ body{font-family:'Nunito',sans-serif;background:linear-gradient(180deg,#d4eef8 0
 .lock-icon{position:absolute;top:8px;right:8px;font-size:13px;color:#ccc;}
 .level-banner{background:rgba(255,255,255,0.5);border-radius:14px;padding:8px 16px;margin-bottom:12px;font-size:13px;color:#888;}
 .level-banner strong{color:#a8d4bc;font-family:'Baloo 2',cursive;font-size:15px;}
+/* cat card colors */
+.cc0{background:rgba(168,230,207,0.3);border:2px solid rgba(168,230,207,0.4);}
+.cc1{background:rgba(245,212,160,0.3);border:2px solid rgba(245,212,160,0.4);}
+.cc2{background:rgba(244,184,196,0.3);border:2px solid rgba(244,184,196,0.4);}
+.cc3{background:rgba(184,212,232,0.3);border:2px solid rgba(184,212,232,0.4);}
+.cc4{background:rgba(200,184,216,0.3);border:2px solid rgba(200,184,216,0.4);}
+.cc5{background:rgba(168,230,220,0.3);border:2px solid rgba(168,230,220,0.4);}
 /* TOPICS SCROLL */
 .topics-scroll-wrap{width:100%;max-width:600px;position:relative;}
 .topics-scroll{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:10px 5px 16px;scrollbar-width:none;}
@@ -106,8 +114,9 @@ body{font-family:'Nunito',sans-serif;background:linear-gradient(180deg,#d4eef8 0
 .progress-info{font-size:13px;color:#b5b5b5;margin-bottom:10px;}
 /* CHOICE */
 .choice-card{background:rgba(255,255,255,0.8);border-radius:24px;padding:24px;max-width:320px;width:100%;box-shadow:0 8px 30px rgba(0,0,0,0.08);}
-.choice-thumb{width:140px;height:140px;border-radius:16px;object-fit:cover;margin:0 auto 12px;display:block;box-shadow:0 4px 12px rgba(0,0,0,0.08);}
-.choice-topic-name{font-family:'Baloo 2',cursive;font-size:22px;color:#555;margin-bottom:16px;}
+.choice-thumb{width:140px;height:140px;border-radius:16px;object-fit:cover;margin:0 auto 6px;display:block;box-shadow:0 4px 12px rgba(0,0,0,0.08);}
+.choice-topic-name{font-family:'Baloo 2',cursive;font-size:22px;color:#555;margin-bottom:4px;}
+.choice-brand{font-size:11px;color:#c8b8d8;margin-bottom:12px;}
 .choice-btns{display:flex;gap:12px;justify-content:center;}
 .choice-btn{flex:1;padding:14px 10px;border:none;border-radius:16px;font-family:'Baloo 2',cursive;font-size:15px;cursor:pointer;transition:transform 0.2s;text-align:center;line-height:1.3;}
 .choice-btn:hover{transform:scale(1.05);}
@@ -121,32 +130,36 @@ body{font-family:'Nunito',sans-serif;background:linear-gradient(180deg,#d4eef8 0
 .progress-fill{height:100%;background:linear-gradient(90deg,#a8e6cf,#7ec8e3);border-radius:10px;transition:width 0.4s;}
 .question-num{font-size:13px;color:#b5b5b5;margin-bottom:8px;}
 .question-text{font-family:'Baloo 2',cursive;font-size:20px;color:#555;background:rgba(255,255,255,0.6);border-radius:20px;padding:16px;margin-bottom:14px;box-shadow:0 4px 15px rgba(0,0,0,0.05);max-width:400px;width:100%;}
-.answers-grid{display:flex;flex-direction:column;gap:10px;max-width:400px;width:100%;}
-.answer-btn{background:rgba(255,255,255,0.7);border:2px solid transparent;border-radius:16px;padding:13px;font-family:'Nunito',sans-serif;font-size:16px;font-weight:700;color:#666;cursor:pointer;transition:all 0.3s;text-align:center;}
-.answer-btn:hover{border-color:#a8e6cf;transform:scale(1.02);}
-.answer-btn.correct{background:#caffbf;border-color:#6bcf7f;color:#2d7a3a;}
-.answer-btn.wrong{background:#ffadad;border-color:#ff6b6b;color:#c0392b;}
+/* COLORFUL ANSWER GRID */
+.answers-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:400px;width:100%;}
+.answer-btn{border:2px solid transparent;border-radius:16px;padding:13px 8px;font-family:'Nunito',sans-serif;font-size:15px;font-weight:700;color:#555;cursor:pointer;transition:all 0.3s;text-align:center;}
+.answer-btn:hover{transform:scale(1.03);}
+.answer-btn.a0{background:rgba(168,230,207,0.4);}
+.answer-btn.a1{background:rgba(245,212,160,0.4);}
+.answer-btn.a2{background:rgba(200,184,216,0.4);}
+.answer-btn.a3{background:rgba(244,184,196,0.4);}
+.answer-btn.correct{background:#caffbf!important;border-color:#6bcf7f;color:#2d7a3a;}
+.answer-btn.wrong{background:#ffadad!important;border-color:#ff6b6b;color:#c0392b;}
 .answer-btn.disabled{pointer-events:none;}
 .auto-timer{font-size:12px;color:#ccc;margin-top:8px;}
+/* WRONG ANSWER VIDEO VERTICAL */
+#quizVideoSide iframe{width:100%;aspect-ratio:9/16;max-height:400px;border:none;border-radius:16px;}
 /* RESULTS */
 .results-box{background:rgba(255,255,255,0.7);border-radius:24px;padding:26px;max-width:340px;width:100%;box-shadow:0 8px 30px rgba(0,0,0,0.08);margin-top:10px;}
 .results-score{font-family:'Baloo 2',cursive;font-size:44px;color:#b07840;margin:8px 0;}
 .results-credits{font-family:'Baloo 2',cursive;font-size:18px;color:#b07840;background:rgba(200,160,100,0.1);border-radius:14px;padding:6px 14px;display:inline-block;margin-bottom:10px;}
 .pass-badge{display:inline-block;padding:4px 14px;border-radius:12px;font-size:13px;font-weight:700;margin-bottom:10px;}
-.pass-badge.passed{background:#caffbf;color:#2d7a3a;}
-.pass-badge.failed{background:#ffadad;color:#c0392b;}
+.pass-badge.passed{background:#caffbf;color:#2d7a3a;}.pass-badge.failed{background:#ffadad;color:#c0392b;}
 .results-msg{font-size:14px;color:#888;margin-bottom:12px;}
 .missed-section{text-align:left;margin-top:14px;}
 .missed-section h4{font-family:'Baloo 2',cursive;color:#f4b8c4;font-size:15px;margin-bottom:8px;}
 .missed-video{margin-bottom:10px;background:rgba(255,255,255,0.5);border-radius:12px;padding:10px;}
 .missed-video p{font-size:12px;color:#888;margin-bottom:5px;}
-.missed-video iframe{width:100%;height:170px;border:none;border-radius:10px;}
+.missed-video iframe{width:100%;aspect-ratio:9/16;max-height:350px;border:none;border-radius:10px;}
 .action-btns{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;justify-content:center;}
 .action-btn{padding:10px 20px;border:none;border-radius:20px;font-family:'Baloo 2',cursive;font-size:14px;cursor:pointer;transition:transform 0.2s;}
 .action-btn:hover{transform:scale(1.05);}
-.btn-retry{background:#5cba8c;color:white;}
-.btn-series{background:rgba(255,255,255,0.6);color:#999;}
-.btn-home{background:rgba(255,255,255,0.6);color:#999;}
+.btn-retry{background:#5cba8c;color:white;}.btn-series{background:rgba(255,255,255,0.6);color:#999;}.btn-home{background:rgba(255,255,255,0.6);color:#999;}
 /* POPUPS */
 .popup-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.2);z-index:200;align-items:center;justify-content:center;}
 .popup-overlay.show{display:flex;}
@@ -161,8 +174,7 @@ body{font-family:'Nunito',sans-serif;background:linear-gradient(180deg,#d4eef8 0
 .maybe-btn:hover{transform:scale(1.05);}
 .sub-actions{display:flex;gap:10px;justify-content:center;margin-top:10px;}
 .sub-actions button{padding:6px 14px;border:none;border-radius:14px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Nunito',sans-serif;}
-.bell-btn{background:rgba(50,50,50,0.85);color:white;}
-.like-btn{background:rgba(100,180,230,0.3);color:#4a90b8;}
+.bell-btn{background:rgba(50,50,50,0.85);color:white;}.like-btn{background:rgba(100,180,230,0.3);color:#4a90b8;}
 .setting-row{display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.6);border-radius:14px;padding:14px 16px;margin-bottom:10px;}
 .setting-label{font-weight:700;color:#555;font-size:14px;}
 .toggle{width:48px;height:26px;border-radius:13px;background:#ddd;border:none;cursor:pointer;position:relative;transition:background 0.3s;}
@@ -176,11 +188,9 @@ body{font-family:'Nunito',sans-serif;background:linear-gradient(180deg,#d4eef8 0
 body.on-landing .hide-on-landing{display:none!important;}
 body.on-landing .show-on-landing{display:flex!important;}
 .show-on-landing{display:none;}
-@media(max-width:768px){.question-text,.answers-grid,.progress-bar,.question-num,.auto-timer{text-align:center;}}
 </style>
 </head>
 <body class="on-landing">
-<!-- CLOUDS -->
 <div class="cloud c1"><svg width="90" height="50" viewBox="0 0 90 50"><ellipse cx="45" cy="35" rx="40" ry="15" fill="rgba(255,255,255,0.7)"/><ellipse cx="30" cy="22" rx="22" ry="18" fill="rgba(255,255,255,0.7)"/><ellipse cx="55" cy="18" rx="18" ry="15" fill="rgba(255,255,255,0.7)"/></svg></div>
 <div class="cloud c2"><svg width="70" height="40" viewBox="0 0 70 40"><ellipse cx="35" cy="28" rx="30" ry="12" fill="rgba(255,255,255,0.7)"/><ellipse cx="22" cy="18" rx="17" ry="14" fill="rgba(255,255,255,0.7)"/><ellipse cx="45" cy="15" rx="14" ry="12" fill="rgba(255,255,255,0.7)"/></svg></div>
 <div class="cloud c3"><svg width="100" height="55" viewBox="0 0 100 55"><ellipse cx="50" cy="38" rx="45" ry="16" fill="rgba(255,255,255,0.7)"/><ellipse cx="35" cy="24" rx="24" ry="20" fill="rgba(255,255,255,0.7)"/><ellipse cx="62" cy="20" rx="20" ry="16" fill="rgba(255,255,255,0.7)"/></svg></div>
@@ -192,7 +202,7 @@ body.on-landing .show-on-landing{display:flex!important;}
 <div class="fs f1">⭐</div><div class="fs f2">🌟</div><div class="fs f3">✨</div><div class="fs f4">⭐</div><div class="fs f5">🌟</div><div class="fs f6">✨</div><div class="fs f7">⭐</div><div class="fs f8">🌟</div>
 <!-- TOP BAR -->
 <div class="top-bar">
-  <a class="logo-link" onclick="showPage('landing')"><img src="https://res.cloudinary.com/dzkwltgyd/image/upload/v1779628059/glifchat-image-input-production/pyqpq8vyynps308i4a0j.png" alt="Play Kids Bright"><span>Home</span></a>
+  <a class="logo-link" onclick="showPage('landing')"><img src="https://res.cloudinary.com/dzkwltgyd/image/upload/v1779628059/glifchat-image-input-production/pyqpq8vyynps308i4a0j.png" alt="PKB"><span>Home</span></a>
   <div class="top-right">
     <div class="sm-top hide-on-landing">
       <a href="https://www.youtube.com/@playkidsbright" target="_blank" class="yt"><i class="fa-brands fa-youtube"></i></a>
@@ -219,8 +229,7 @@ body.on-landing .show-on-landing{display:flex!important;}
 <!-- LANDING -->
 <div class="page landing active" id="pageLanding">
   <h1 class="rainbow-title" id="rainbowTitle"></h1>
-  <img class="squirrel-hero" src="https://res.cloudinary.com/dzkwltgyd/image/upload/v1780495469/glifchat-image-input-production/qekfb6bgi8tynbsyhhhq.png" alt="Squirrel">
-  <button class="play-btn" onclick="showPage('age')">PLAY</button>
+  <div class="sq-box"><video src="videos/wave.mp4" autoplay loop muted playsinline></video></div>
   <p class="tagline">Learn ABC, Numbers, Colors & More!</p>
   <div class="sm-icons">
     <a href="https://www.youtube.com/@playkidsbright" target="_blank" class="yt"><i class="fa-brands fa-youtube"></i></a>
@@ -230,6 +239,7 @@ body.on-landing .show-on-landing{display:flex!important;}
     <a href="https://www.threads.com/@playkidsbright" target="_blank" class="threads"><i class="fa-brands fa-threads"></i></a>
     <a href="https://x.com/playkidsbright" target="_blank" class="xtwitter"><i class="fa-brands fa-x-twitter"></i></a>
   </div>
+  <button class="play-btn" onclick="showPage('age')">PLAY</button>
   <div class="bottom-actions">
     <button class="share-btn" onclick="shareWebsite()"><i class="fa-solid fa-share-nodes"></i> Share</button>
     <button class="subscribe-btn" onclick="window.open('https://www.youtube.com/@playkidsbright?sub_confirmation=1','_blank')"><i class="fa-brands fa-youtube"></i> Subscribe</button>
@@ -237,65 +247,73 @@ body.on-landing .show-on-landing{display:flex!important;}
 </div>
 <!-- AGE -->
 <div class="page" id="pageAge">
-  <div class="page-arrows"><button class="arrow-btn" onclick="showPage('landing')"><i class="fa-solid fa-arrow-left"></i><span class="arr-text">Back</span></button><div class="page-title-mid">How Old Are You?</div><div style="width:60px"></div></div>
+  <div class="page-title">How Old Are You?</div>
   <div class="age-grid">
-    <div class="age-card" onclick="selectAge('3-5')"><div class="emoji">🧸</div><div class="label">3 - 5</div><div class="desc">Little Learners</div></div>
-    <div class="age-card" onclick="selectAge('6-8')"><div class="emoji">🎨</div><div class="label">6 - 8</div><div class="desc">Curious Kids</div></div>
-    <div class="age-card" onclick="selectAge('9-11')"><div class="emoji">🔬</div><div class="label">9 - 11</div><div class="desc">Smart Explorers</div></div>
-    <div class="age-card" onclick="selectAge('12-13')"><div class="emoji">🚀</div><div class="label">12 - 13</div><div class="desc">Super Stars</div></div>
+    <div class="age-card c1" onclick="selectAge('3-5')"><div class="emoji">🧸</div><div class="label">3 - 5</div><div class="desc">Little Learners</div></div>
+    <div class="age-card c2" onclick="selectAge('6-8')"><div class="emoji">🎨</div><div class="label">6 - 8</div><div class="desc">Curious Kids</div></div>
+    <div class="age-card c3" onclick="selectAge('9-11')"><div class="emoji">🔬</div><div class="label">9 - 11</div><div class="desc">Smart Explorers</div></div>
+    <div class="age-card c4" onclick="selectAge('12-13')"><div class="emoji">🚀</div><div class="label">12 - 13</div><div class="desc">Super Stars</div></div>
   </div>
-  <div class="sq-circle" style="margin-top:20px;"><video src="videos/think.mp4" autoplay loop muted playsinline></video></div>
+  <div class="sq-box" style="margin-top:16px;"><video src="videos/think.mp4" autoplay loop muted playsinline></video></div>
+  <div class="nav-bottom"><button class="nav-btn back-btn" onclick="showPage('landing')"><i class="fa-solid fa-arrow-left"></i> Back</button></div>
 </div>
 <!-- CATEGORIES -->
 <div class="page" id="pageCategories">
-  <div class="page-arrows"><button class="arrow-btn" onclick="showPage('age')"><i class="fa-solid fa-arrow-left"></i><span class="arr-text">Back</span></button><div class="page-title-mid" style="font-size:26px;">Pick a Category!</div><div style="width:60px"></div></div>
-  <div class="sq-circle-sm"><video src="videos/idle.mp4" autoplay loop muted playsinline></video></div>
+  <div class="page-title" style="font-size:26px;">Pick a Category!</div>
+  <div class="sq-box-sm"><video src="videos/idle.mp4" autoplay loop muted playsinline></video></div>
   <div class="level-banner">🐿 Level <strong id="currentLevel">1</strong></div>
   <div class="cat-grid" id="catGrid"></div>
+  <div class="nav-bottom"><button class="nav-btn back-btn" onclick="showPage('age')"><i class="fa-solid fa-arrow-left"></i> Back</button></div>
 </div>
 <!-- TOPICS -->
 <div class="page" id="pageTopics">
-  <div class="page-arrows"><button class="arrow-btn" onclick="showPage('categories')"><i class="fa-solid fa-arrow-left"></i><span class="arr-text">Back</span></button><div class="page-title-mid" id="topicsTitle">ABC</div><div style="width:60px"></div></div>
+  <div class="page-title" id="topicsTitle">ABC</div>
   <div class="progress-info" id="topicsProgress">0 completed</div>
   <div class="topics-scroll-wrap">
     <button class="scroll-arrow left" onclick="scrollTopics(-1)"><i class="fa-solid fa-chevron-left"></i></button>
     <div class="topics-scroll" id="thumbGrid"></div>
     <button class="scroll-arrow right" onclick="scrollTopics(1)"><i class="fa-solid fa-chevron-right"></i></button>
   </div>
-  <div class="sq-circle" style="margin-top:20px;"><video src="videos/idle.mp4" autoplay loop muted playsinline></video></div>
+  <div class="sq-box" style="margin-top:16px;"><video src="videos/idle.mp4" autoplay loop muted playsinline></video></div>
+  <div class="nav-bottom"><button class="nav-btn back-btn" onclick="showPage('categories')"><i class="fa-solid fa-arrow-left"></i> Back</button></div>
 </div>
 <!-- CHOICE -->
 <div class="page" id="pageChoice">
-  <div class="page-arrows"><button class="arrow-btn" onclick="openTopics(currentSeries)"><i class="fa-solid fa-arrow-left"></i><span class="arr-text">Back</span></button><div class="page-title-mid" id="choiceTitle">Topic</div><div style="width:60px"></div></div>
-  <div class="sq-circle-sm"><video src="videos/point.mp4" autoplay loop muted playsinline></video></div>
+  <div class="sq-box-sm"><video src="videos/point.mp4" autoplay loop muted playsinline></video></div>
   <div class="choice-card">
     <img class="choice-thumb" id="choiceThumb" src="" alt="" onerror="this.style.background='linear-gradient(135deg,#e0d4ea,#c8e8f8)';this.style.height='140px';">
     <div class="choice-topic-name" id="choiceTopicName">Apple</div>
+    <div class="choice-brand">playkidsbright 🐿</div>
     <div class="choice-btns">
       <button class="choice-btn puzzle-choice" disabled>🧩 Puzzle<small>Coming Soon 🔒</small></button>
       <button class="choice-btn quiz-choice" onclick="startQuiz()">❓ Quiz<small>Play Now!</small></button>
     </div>
     <div class="puzzle-types"><span>🎨 Painting</span><span>📦 Collecting</span><span>👀 Look Alike</span><span>🌈 Colour-Pop</span><span>🧩 Matching</span><span>✏️ Tracing</span><span>🏗️ Building</span><span>⭐ Shapes-Pop</span></div>
   </div>
+  <div class="nav-bottom"><button class="nav-btn back-btn" onclick="openTopics(currentSeries)"><i class="fa-solid fa-arrow-left"></i> Back</button></div>
 </div>
 <!-- QUIZ -->
 <div class="page" id="pageQuiz">
-  <div class="page-arrows"><button class="arrow-btn" id="quizBackBtn" onclick="quizGoBack()"><i class="fa-solid fa-arrow-left"></i><span class="arr-text">Back</span></button><div class="page-title-mid" id="quizTitle">Quiz</div><button class="arrow-btn" id="quizNextBtn" onclick="nextQuestion()"><i class="fa-solid fa-arrow-right"></i><span class="arr-text">Next</span></button></div>
+  <div class="page-title" id="quizTitle">Quiz</div>
   <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
   <div class="question-num" id="questionNum">1 of 5</div>
   <div class="question-text" id="questionText"></div>
   <div class="answers-grid" id="answersGrid"></div>
   <div class="auto-timer" id="autoTimer"></div>
-  <div class="sq-circle" id="quizSquirrelCircle"><video id="quizVid" src="videos/think.mp4" autoplay loop muted playsinline></video></div>
-  <div id="quizVideoSide" style="display:none;width:100%;max-width:400px;margin-top:10px;">
+  <div class="sq-box" id="quizSqBox"><video id="quizVid" src="videos/think.mp4" autoplay loop muted playsinline></video></div>
+  <div id="quizVideoSide" style="display:none;width:100%;max-width:300px;margin-top:10px;">
     <div id="quizYTContainer"></div>
     <p style="font-size:11px;color:#b5b5b5;margin-top:6px;">📺 Watch to earn +2🐿!</p>
+  </div>
+  <div class="nav-bottom">
+    <button class="nav-btn back-btn" onclick="quizGoBack()"><i class="fa-solid fa-arrow-left"></i> Back</button>
+    <button class="nav-btn next-btn" id="quizNextBtn" onclick="nextQuestion()">Next <i class="fa-solid fa-arrow-right"></i></button>
   </div>
 </div>
 <!-- RESULTS -->
 <div class="page" id="pageResults">
-  <div class="sq-circle" id="resultsSquirrelCircle"><video id="resultsVid" src="videos/cheer.mp4" autoplay loop muted playsinline></video></div>
-  <div class="page-arrows"><button class="arrow-btn" onclick="openTopics(currentSeries)"><i class="fa-solid fa-arrow-left"></i><span class="arr-text">Back</span></button><div class="page-title-mid" id="resultsTitle">Results</div><div style="width:60px"></div></div>
+  <div class="sq-box" id="resultsSqBox"><video id="resultsVid" src="videos/cheer.mp4" autoplay loop muted playsinline></video></div>
+  <div class="page-title" id="resultsTitle">Results</div>
   <div class="results-box">
     <div class="results-score" id="resultsScore">0/5</div>
     <div class="pass-badge" id="passBadge">PASSED</div>
@@ -311,8 +329,8 @@ body.on-landing .show-on-landing{display:flex!important;}
 </div>
 <!-- REWARDS -->
 <div class="page" id="pageRewards">
-  <div class="page-arrows"><button class="arrow-btn" onclick="showPage('landing')"><i class="fa-solid fa-arrow-left"></i><span class="arr-text">Back</span></button><div class="page-title-mid">🎁 Rewards</div><div style="width:60px"></div></div>
-  <div class="sq-circle"><video src="videos/gift.mp4" autoplay loop muted playsinline></video></div>
+  <div class="page-title">🎁 Rewards</div>
+  <div class="sq-box"><video src="videos/gift.mp4" autoplay loop muted playsinline></video></div>
   <div class="results-box">
     <p style="font-size:14px;color:#888;margin-bottom:8px;">Your 🐿 Credits</p>
     <div class="results-score" id="rewardsTotal">0</div>
@@ -323,25 +341,27 @@ body.on-landing .show-on-landing{display:flex!important;}
       <div class="setting-row"><span class="setting-label">Daily Streak</span><span id="rewardsStreak">Day 0</span></div>
     </div>
   </div>
+  <div class="nav-bottom"><button class="nav-btn back-btn" onclick="showPage('landing')"><i class="fa-solid fa-arrow-left"></i> Home</button></div>
 </div>
 <!-- SETTINGS -->
 <div class="page" id="pageSettings">
-  <div class="page-arrows"><button class="arrow-btn" onclick="showPage('landing')"><i class="fa-solid fa-arrow-left"></i><span class="arr-text">Back</span></button><div class="page-title-mid">⚙ Settings</div><div style="width:60px"></div></div>
-  <div class="sq-circle-sm"><video src="videos/idle.mp4" autoplay loop muted playsinline></video></div>
+  <div class="page-title">⚙ Settings</div>
+  <div class="sq-box-sm"><video src="videos/idle.mp4" autoplay loop muted playsinline></video></div>
   <div class="settings-panel">
     <div class="setting-row"><span class="setting-label">🔊 Sound Effects</span><button class="toggle on" id="sfxToggle" onclick="toggleSFX(this)"></button></div>
     <div class="setting-row"><span class="setting-label">🎵 Background Music</span><button class="toggle" id="musicToggle" onclick="toggleMusic(this)"></button></div>
     <div class="setting-row"><span class="setting-label">🗑 Reset Progress</span><button class="collect-btn" style="font-size:12px;padding:6px 14px;background:#ffadad;" onclick="resetProgress()">Reset</button></div>
   </div>
+  <div class="nav-bottom"><button class="nav-btn back-btn" onclick="showPage('landing')"><i class="fa-solid fa-arrow-left"></i> Home</button></div>
 </div>
 <!-- SUBSCRIBE POPUP -->
-<div class="popup-overlay" id="subPopup"><div class="popup"><div class="sq-circle-sm"><video src="videos/thumbsup.mp4" autoplay loop muted playsinline></video></div><h3>You're Doing Great! 🐿️</h3><p>Subscribe for more fun learning!</p><a class="collect-btn" href="https://www.youtube.com/@playkidsbright?sub_confirmation=1" target="_blank" style="display:block;text-decoration:none;margin-top:12px;background:#e04050;"><i class="fa-brands fa-youtube"></i> Subscribe Now!</a><div class="sub-actions"><button class="bell-btn" onclick="window.open('https://www.youtube.com/@playkidsbright?sub_confirmation=1','_blank')">🔔 Tap Bell</button><button class="like-btn" onclick="window.open('https://www.youtube.com/@playkidsbright','_blank')">👍 Like</button></div><button class="maybe-btn" onclick="closePopup('subPopup')">Maybe Later 💭</button></div></div>
+<div class="popup-overlay" id="subPopup"><div class="popup"><div class="sq-box-sm"><video src="videos/thumbsup.mp4" autoplay loop muted playsinline></video></div><h3>You're Doing Great! 🐿️</h3><p>Subscribe for more fun learning!</p><a class="collect-btn" href="https://www.youtube.com/@playkidsbright?sub_confirmation=1" target="_blank" style="display:block;text-decoration:none;margin-top:12px;background:#e04050;"><i class="fa-brands fa-youtube"></i> Subscribe Now!</a><div class="sub-actions"><button class="bell-btn" onclick="window.open('https://www.youtube.com/@playkidsbright?sub_confirmation=1','_blank')">🔔 Tap Bell</button><button class="like-btn" onclick="window.open('https://www.youtube.com/@playkidsbright','_blank')">👍 Like</button></div><button class="maybe-btn" onclick="closePopup('subPopup')">Maybe Later 💭</button></div></div>
 <!-- UNLOCK POPUP -->
-<div class="popup-overlay" id="unlockPopup"><div class="popup"><div class="sq-circle-sm"><video src="videos/point.mp4" autoplay loop muted playsinline></video></div><h3>🔒 Locked!</h3><p>Unlock for FREE! 🐿️</p><a class="collect-btn" id="unlockSubBtn" href="https://www.youtube.com/@playkidsbright?sub_confirmation=1" target="_blank" style="display:block;text-decoration:none;margin-top:12px;background:#e04050;"><i class="fa-brands fa-youtube"></i> Subscribe — FREE!</a><button class="collect-btn" style="background:rgba(100,180,230,0.5);margin-top:8px;font-size:14px;width:100%;" onclick="shareToUnlock()"><i class="fa-solid fa-share-nodes"></i> Share to Unlock</button><p style="font-size:12px;color:#bbb;margin-top:10px;">or use 10🐿 credits</p><button class="collect-btn" id="unlockCreditsBtn" style="background:rgba(180,160,100,0.3);color:#b07840;font-size:13px;padding:8px 18px;" onclick="unlockWithCredits()">Use 10🐿</button><button class="maybe-btn" onclick="closePopup('unlockPopup')">Maybe Later 💭</button></div></div>
+<div class="popup-overlay" id="unlockPopup"><div class="popup"><div class="sq-box-sm"><video src="videos/point.mp4" autoplay loop muted playsinline></video></div><h3>🔒 Locked!</h3><p>Unlock for FREE! 🐿️</p><a class="collect-btn" id="unlockSubBtn" href="https://www.youtube.com/@playkidsbright?sub_confirmation=1" target="_blank" style="display:block;text-decoration:none;margin-top:12px;background:#e04050;"><i class="fa-brands fa-youtube"></i> Subscribe — FREE!</a><button class="collect-btn" style="background:rgba(100,180,230,0.5);margin-top:8px;font-size:14px;width:100%;" onclick="shareToUnlock()"><i class="fa-solid fa-share-nodes"></i> Share to Unlock</button><p style="font-size:12px;color:#bbb;margin-top:10px;">or use 10🐿 credits</p><button class="collect-btn" id="unlockCreditsBtn" style="background:rgba(180,160,100,0.3);color:#b07840;font-size:13px;padding:8px 18px;" onclick="unlockWithCredits()">Use 10🐿</button><button class="maybe-btn" onclick="closePopup('unlockPopup')">Maybe Later 💭</button></div></div>
 <!-- DAILY POPUP -->
-<div class="popup-overlay" id="dailyPopup"><div class="popup"><div class="sq-circle-sm"><video src="videos/jump.mp4" autoplay loop muted playsinline></video></div><h3>Welcome Back! 🐿</h3><p>Your daily reward!</p><div class="reward">+5 🐿</div><p style="font-size:13px;color:#b5b5b5;">Day <span id="streakDay">1</span> of 7</p><button class="collect-btn" onclick="collectDaily()">Collect! 🐿</button></div></div>
+<div class="popup-overlay" id="dailyPopup"><div class="popup"><div class="sq-box-sm"><video src="videos/jump.mp4" autoplay loop muted playsinline></video></div><h3>Welcome Back! 🐿</h3><p>Your daily reward!</p><div class="reward">+5 🐿</div><p style="font-size:13px;color:#b5b5b5;">Day <span id="streakDay">1</span> of 7</p><button class="collect-btn" onclick="collectDaily()">Collect! 🐿</button></div></div>
 <!-- LEVEL UP POPUP -->
-<div class="popup-overlay" id="levelUpPopup"><div class="popup"><div class="sq-circle-sm"><video src="videos/celebrate.mp4" autoplay loop muted playsinline></video></div><h3>Level Up! 🎉</h3><div class="reward" id="newLevelText">Level 2!</div><button class="collect-btn" onclick="closePopup('levelUpPopup')">Continue!</button></div></div>
+<div class="popup-overlay" id="levelUpPopup"><div class="popup"><div class="sq-box-sm"><video src="videos/celebrate.mp4" autoplay loop muted playsinline></video></div><h3>Level Up! 🎉</h3><div class="reward" id="newLevelText">Level 2!</div><button class="collect-btn" onclick="closePopup('levelUpPopup')">Continue!</button></div></div>
 
 <script>
 var SQ='https://res.cloudinary.com/dzkwltgyd/image/upload/v1780495469/glifchat-image-input-production/qekfb6bgi8tynbsyhhhq.png';
@@ -350,6 +370,7 @@ var tEl=document.getElementById('rainbowTitle');var tc=0;
 'Play Kids'.split('').forEach(function(ch){var s=document.createElement('span');if(ch===' '){s.innerHTML='&nbsp;';}else{s.textContent=ch;s.style.color=tColors[tc%tColors.length];tc++;}tEl.appendChild(s);});
 tEl.innerHTML+='<br>';
 'Bright'.split('').forEach(function(ch){var s=document.createElement('span');s.textContent=ch;s.style.color=tColors[tc%tColors.length];tc++;tEl.appendChild(s);});
+
 var categories=[
 {id:'abc',name:'ABC & Phonics',icon:'🔤',topics:['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'],ready:true},
 {id:'numbers',name:'Numbers & Counting',icon:'🔢',topics:['1','2','3','4','5','6','7','8','9','10'],ready:true},
@@ -364,7 +385,9 @@ var categories=[
 {id:'rhymes',name:'Rhymes & Stories',icon:'🎵',topics:['Nursery Rhymes','Short Stories','Lullabies','Action Songs'],ready:false},
 {id:'smart',name:'Smart Kids',icon:'🧪',topics:['Science','GK','Vocabulary','Full Forms','Reasoning'],ready:false}
 ];
+var catColors=['cc0','cc1','cc2','cc3','cc4','cc5','cc0','cc1','cc2','cc3','cc4','cc5'];
 var ytIDs={abc:{A:'fhPO1pq7eoA',B:'4MlIyg-iPRI',C:'SXfsTO5FmtQ',D:'ZyBOEOAQ1MM',E:'uVuIZzQTknU',F:'-1oUg4Kpe1g',G:'xzvXahA_GrM',H:'W0AhZyuNiew',I:'b1wYrOwWJ-E',J:'fvuMp9auHZw',K:'A9ya_oyMJT4',L:'WjdNdPUt50w',M:'gdXn9cg8Tv0',N:'_6Qu_acanRo',O:'fPtkxb2vMTE',P:'ORou7KN3eic',Q:'Gf-I6565hUM',R:'6eY0S3X0hJg',S:'hkU3LHyoaxo',T:'xHXbJ6J1XQ4',U:'-i6cmFXaEhk',V:'k393bFG3SZI',W:'qf5rDMLl0ng',X:'qiXlyFAL8Kw',Y:'Jq1_wYCZFSE',Z:'hf3B7zQJ_Rk'},numbers:{'1':'f9oeOTIwuV0','2':'_KRMH4zvKwM','3':'wZRx8xrDOD8','4':'xWyzho6RX3g','5':'qCdJIA-AsyM','6':'SLxCev014d8','7':'6meU3rBlhIs','8':'fTpIhxvFgQs','9':'_dwsJWPOkwM','10':'Mx3QwwLe7SE'},colors:{}};
+
 var quizBank={
 A:[{q:"What letter does APPLE start with?",opts:["A","B","C","D"],ans:0},{q:"Which word starts with A?",opts:["Ball","Cat","Ant","Dog"],ans:2},{q:"A is for...",opts:["Ball","Apple","Cat","Dog"],ans:1},{q:"Find the letter A!",opts:["B","D","A","G"],ans:2},{q:"Which animal starts with A?",opts:["Bear","Alligator","Cat","Dog"],ans:1}],
 B:[{q:"What letter does BALL start with?",opts:["D","B","F","G"],ans:1},{q:"Which word starts with B?",opts:["Apple","Butterfly","Cat","Dog"],ans:1},{q:"B is for...",opts:["Ball","Apple","Cat","Dog"],ans:0},{q:"Find the letter B!",opts:["D","P","R","B"],ans:3},{q:"Which animal starts with B?",opts:["Cat","Bear","Dog","Fish"],ans:1}],
@@ -382,7 +405,7 @@ M:[{q:"What letter does MONKEY start with?",opts:["M","N","W","K"],ans:0},{q:"Wh
 N:[{q:"What letter does NEST start with?",opts:["M","N","H","B"],ans:1},{q:"Which word starts with N?",opts:["Ball","Cat","Nose","Dog"],ans:2},{q:"N is for...",opts:["Ball","Cat","Dog","Night"],ans:3},{q:"Find the letter N!",opts:["M","N","H","Z"],ans:1},{q:"Which starts with N?",opts:["Ball","Net","Cat","Dog"],ans:1}],
 O:[{q:"What letter does OCTOPUS start with?",opts:["U","Q","O","C"],ans:2},{q:"Which word starts with O?",opts:["Ball","Cat","Dog","Orange"],ans:3},{q:"O is for...",opts:["Owl","Ball","Cat","Dog"],ans:0},{q:"Find the letter O!",opts:["Q","D","C","O"],ans:3},{q:"Which starts with O?",opts:["Ball","Cat","Onion","Dog"],ans:2}],
 P:[{q:"What letter does PENGUIN start with?",opts:["B","Q","D","P"],ans:3},{q:"Which word starts with P?",opts:["Ball","Cat","Pizza","Dog"],ans:2},{q:"P is for...",opts:["Ball","Cat","Dog","Parrot"],ans:3},{q:"Find the letter P!",opts:["Q","B","D","P"],ans:3},{q:"Which starts with P?",opts:["Ball","Cat","Panda","Dog"],ans:2}],
-Q:[{q:"What letter does QUEEN start with?",opts:["Q","K","G","P"],ans:0},{q:"Which word starts with Q?",opts:["Ball","Quilt","Cat","Dog"],ans:1},{q:"Q is for...",opts:["Ball","Cat","Question","Dog"],ans:2},{q:"Find the letter Q!",opts:["O","G","Q","P"],ans:2},{q:"Q almost always has which letter after it?",opts:["A","E","U","O"],ans:2}],
+Q:[{q:"What letter does QUEEN start with?",opts:["Q","K","G","P"],ans:0},{q:"Which word starts with Q?",opts:["Ball","Quilt","Cat","Dog"],ans:1},{q:"Q is for...",opts:["Ball","Cat","Question","Dog"],ans:2},{q:"Find the letter Q!",opts:["O","G","Q","P"],ans:2},{q:"Q always has which letter after it?",opts:["A","E","U","O"],ans:2}],
 R:[{q:"What letter does RAINBOW start with?",opts:["N","R","P","W"],ans:1},{q:"Which word starts with R?",opts:["Ball","Cat","Robot","Dog"],ans:2},{q:"R is for...",opts:["Ball","Cat","Dog","Rabbit"],ans:3},{q:"Find the letter R!",opts:["P","B","R","K"],ans:2},{q:"Which starts with R?",opts:["Ball","Cat","Rain","Dog"],ans:2}],
 S:[{q:"What letter does SQUIRREL start with?",opts:["Q","C","S","Z"],ans:2},{q:"Which word starts with S?",opts:["Ball","Star","Cat","Dog"],ans:1},{q:"S is for...",opts:["Ball","Cat","Sun","Dog"],ans:2},{q:"Find the letter S!",opts:["Z","5","S","C"],ans:2},{q:"Which starts with S?",opts:["Ball","Cat","Snake","Dog"],ans:2}],
 T:[{q:"What letter does TIGER start with?",opts:["L","R","G","T"],ans:3},{q:"Which word starts with T?",opts:["Ball","Cat","Dog","Tree"],ans:3},{q:"T is for...",opts:["Turtle","Ball","Cat","Dog"],ans:0},{q:"Find the letter T!",opts:["I","L","T","J"],ans:2},{q:"Which starts with T?",opts:["Ball","Cat","Train","Dog"],ans:2}],
@@ -391,34 +414,35 @@ V:[{q:"What letter does VIOLIN start with?",opts:["W","V","U","B"],ans:1},{q:"Wh
 W:[{q:"What letter does WHALE start with?",opts:["V","H","W","M"],ans:2},{q:"Which word starts with W?",opts:["Ball","Cat","Dog","Water"],ans:3},{q:"W is for...",opts:["Watch","Ball","Cat","Dog"],ans:0},{q:"Find the letter W!",opts:["M","V","W","N"],ans:2},{q:"Which starts with W?",opts:["Ball","Cat","Wind","Dog"],ans:2}],
 X:[{q:"What letter does XYLOPHONE start with?",opts:["S","Z","Y","X"],ans:3},{q:"Which word starts with X?",opts:["Ball","Cat","X-ray","Dog"],ans:2},{q:"X is for...",opts:["Ball","Cat","Dog","X-mas"],ans:3},{q:"Find the letter X!",opts:["K","Y","Z","X"],ans:3},{q:"X looks like a...",opts:["Circle","Cross","Square","Star"],ans:1}],
 Y:[{q:"What letter does YAK start with?",opts:["Y","U","J","W"],ans:0},{q:"Which word starts with Y?",opts:["Ball","Yellow","Cat","Dog"],ans:1},{q:"Y is for...",opts:["Ball","Cat","Yogurt","Dog"],ans:2},{q:"Find the letter Y!",opts:["V","T","X","Y"],ans:3},{q:"Which starts with Y?",opts:["Ball","Cat","Yarn","Dog"],ans:2}],
-Z:[{q:"What letter does ZEBRA start with?",opts:["S","Z","X","C"],ans:1},{q:"Which word starts with Z?",opts:["Ball","Cat","Dog","Zoo"],ans:3},{q:"Z is for...",opts:["Zero","Ball","Cat","Dog"],ans:0},{q:"Find the letter Z!",opts:["S","N","Z","2"],ans:2},{q:"Z is the ___ letter of the alphabet",opts:["First","Last","Middle","10th"],ans:1}],
-'1':[{q:"How many noses do you have?",opts:["2","1","3","0"],ans:1},{q:"How many suns in the sky?",opts:["1","2","3","4"],ans:0},{q:"How many moons does Earth have?",opts:["0","2","1","3"],ans:2},{q:"What is 1 + 0?",opts:["0","2","1","3"],ans:2},{q:"Show number ONE with fingers!",opts:["One finger!","Two fingers","No fingers","Three fingers"],ans:0}],
-'2':[{q:"How many eyes do you have?",opts:["1","2","3","4"],ans:1},{q:"What is 1 + 1?",opts:["1","3","0","2"],ans:3},{q:"How many wheels on a bicycle?",opts:["1","3","4","2"],ans:3},{q:"What number looks like a swan?",opts:["3","5","2","7"],ans:2},{q:"How many ears do you have?",opts:["1","3","2","4"],ans:2}],
-'3':[{q:"How many sides does a triangle have?",opts:["4","2","3","5"],ans:2},{q:"What is 1 + 2?",opts:["2","4","3","1"],ans:2},{q:"How many little pigs in the story?",opts:["2","3","4","5"],ans:1},{q:"How many colors in a traffic light?",opts:["2","4","3","5"],ans:2},{q:"What comes after 2?",opts:["1","4","3","5"],ans:2}],
-'4':[{q:"How many legs does a dog have?",opts:["2","3","4","6"],ans:2},{q:"What is 2 + 2?",opts:["3","5","4","6"],ans:2},{q:"How many sides does a square have?",opts:["3","5","4","6"],ans:2},{q:"How many wheels on a car?",opts:["2","3","4","6"],ans:2},{q:"What comes after 3?",opts:["2","5","4","6"],ans:2}],
-'5':[{q:"How many fingers on one hand?",opts:["4","5","6","3"],ans:1},{q:"What is 3 + 2?",opts:["4","6","5","7"],ans:2},{q:"How many toes on one foot?",opts:["4","6","5","8"],ans:2},{q:"What comes after 4?",opts:["3","6","5","7"],ans:2},{q:"How many points on a star?",opts:["4","6","5","3"],ans:2}],
-'6':[{q:"How many legs does an insect have?",opts:["4","8","6","2"],ans:2},{q:"What is 3 + 3?",opts:["5","7","6","9"],ans:2},{q:"What comes after 5?",opts:["4","7","6","8"],ans:2},{q:"How many sides does a hexagon have?",opts:["5","7","6","8"],ans:2},{q:"What is 4 + 2?",opts:["5","7","6","8"],ans:2}],
-'7':[{q:"How many days in a week?",opts:["5","6","7","8"],ans:2},{q:"What is 4 + 3?",opts:["6","8","7","5"],ans:2},{q:"How many colors in a rainbow?",opts:["5","6","7","8"],ans:2},{q:"What comes after 6?",opts:["5","8","7","9"],ans:2},{q:"What is 5 + 2?",opts:["6","8","7","9"],ans:2}],
-'8':[{q:"How many legs does a spider have?",opts:["6","10","8","4"],ans:2},{q:"What is 4 + 4?",opts:["6","7","8","9"],ans:2},{q:"How many legs does an octopus have?",opts:["6","10","8","4"],ans:2},{q:"What comes after 7?",opts:["6","9","8","10"],ans:2},{q:"What is 5 + 3?",opts:["7","9","8","6"],ans:2}],
-'9':[{q:"What is 5 + 4?",opts:["8","7","9","10"],ans:2},{q:"What comes before 10?",opts:["8","7","9","11"],ans:2},{q:"What is 3 + 6?",opts:["8","7","9","10"],ans:2},{q:"What comes after 8?",opts:["7","10","9","11"],ans:2},{q:"How many lives does a cat have?",opts:["7","8","9","10"],ans:2}],
-'10':[{q:"How many fingers on both hands?",opts:["8","12","10","6"],ans:2},{q:"What is 5 + 5?",opts:["8","9","10","11"],ans:2},{q:"How many toes do you have total?",opts:["8","12","10","6"],ans:2},{q:"What comes after 9?",opts:["8","11","10","12"],ans:2},{q:"What is the biggest number here?",opts:["8","9","7","10"],ans:3}],
-Red:[{q:"What color is a fire truck?",opts:["Blue","Red","Green","Yellow"],ans:1},{q:"What color are strawberries?",opts:["Orange","Purple","Red","Pink"],ans:2},{q:"What color is a stop sign?",opts:["Red","Blue","Green","Yellow"],ans:0},{q:"Roses are which color?",opts:["Blue","Yellow","Green","Red"],ans:3},{q:"What color is a ladybug?",opts:["Orange","Red","Brown","Pink"],ans:1}],
-Blue:[{q:"What color is the sky?",opts:["Green","Blue","Red","Yellow"],ans:1},{q:"What color is the ocean?",opts:["Green","Red","Blue","Gray"],ans:2},{q:"Blueberries are which color?",opts:["Blue","Red","Purple","Green"],ans:0},{q:"What color is a whale?",opts:["Red","Green","Gray","Blue"],ans:3},{q:"What color is ice?",opts:["White","Blue","Clear","Gray"],ans:1}],
-Green:[{q:"What color is grass?",opts:["Blue","Red","Green","Yellow"],ans:2},{q:"What color are leaves?",opts:["Green","Blue","Red","Brown"],ans:0},{q:"What color is a frog?",opts:["Blue","Red","Brown","Green"],ans:3},{q:"What color is broccoli?",opts:["Red","Green","Yellow","Orange"],ans:1},{q:"What color is a turtle?",opts:["Blue","Red","Green","Pink"],ans:2}],
-Yellow:[{q:"What color is a banana?",opts:["Yellow","Orange","Red","Green"],ans:0},{q:"What color is the sun?",opts:["Red","Yellow","Orange","White"],ans:1},{q:"What color is a lemon?",opts:["Orange","Green","Yellow","Red"],ans:2},{q:"Sunflowers are which color?",opts:["Red","Pink","Orange","Yellow"],ans:3},{q:"What color is a baby chick?",opts:["Yellow","White","Brown","Orange"],ans:0}],
-Orange:[{q:"What color is an orange fruit?",opts:["Orange","Red","Yellow","Brown"],ans:0},{q:"What color is a carrot?",opts:["Red","Orange","Yellow","Brown"],ans:1},{q:"What color is a pumpkin?",opts:["Red","Yellow","Orange","Brown"],ans:2},{q:"A goldfish is which color?",opts:["Yellow","Red","Gold","Orange"],ans:3},{q:"Mix red + yellow =?",opts:["Orange","Purple","Green","Brown"],ans:0}],
-Purple:[{q:"What color are grapes?",opts:["Purple","Blue","Red","Green"],ans:0},{q:"Mix red + blue =?",opts:["Green","Purple","Orange","Brown"],ans:1},{q:"What color is an eggplant?",opts:["Brown","Green","Purple","Blue"],ans:2},{q:"Lavender is which color?",opts:["Pink","Blue","Yellow","Purple"],ans:3},{q:"What color is Barney?",opts:["Purple","Blue","Green","Red"],ans:0}],
-Pink:[{q:"What color is a flamingo?",opts:["Pink","Red","Orange","White"],ans:0},{q:"Mix red + white =?",opts:["Purple","Pink","Orange","Gray"],ans:1},{q:"Cherry blossoms are?",opts:["White","Red","Pink","Purple"],ans:2},{q:"What color is a pig?",opts:["Brown","White","Gray","Pink"],ans:3},{q:"Cotton candy is usually?",opts:["Pink","White","Yellow","Blue"],ans:0}],
-Black:[{q:"What color is the night sky?",opts:["Black","Blue","Gray","Purple"],ans:0},{q:"What color is a crow?",opts:["Brown","Black","Gray","Blue"],ans:1},{q:"What color is coal?",opts:["Gray","Brown","Black","White"],ans:2},{q:"A panther is which color?",opts:["Brown","Gray","Blue","Black"],ans:3},{q:"What color is an ant?",opts:["Black","Brown","Red","Gray"],ans:0}],
-Brown:[{q:"What color is chocolate?",opts:["Brown","Black","Red","Orange"],ans:0},{q:"What color is a bear?",opts:["Black","Brown","Gray","White"],ans:1},{q:"What color is mud?",opts:["Black","Gray","Brown","Red"],ans:2},{q:"Coconut shell is?",opts:["Black","White","Gray","Brown"],ans:3},{q:"Tree trunks are?",opts:["Brown","Green","Gray","Black"],ans:0}],
-White:[{q:"What color is snow?",opts:["White","Blue","Gray","Clear"],ans:0},{q:"What color is milk?",opts:["Yellow","White","Cream","Blue"],ans:1},{q:"What color are clouds?",opts:["Blue","Gray","White","Yellow"],ans:2},{q:"Polar bear is?",opts:["Gray","Brown","Yellow","White"],ans:3},{q:"What color is cotton?",opts:["White","Brown","Yellow","Gray"],ans:0}],
-Gray:[{q:"What color is an elephant?",opts:["Gray","Brown","Blue","Black"],ans:0},{q:"What color is a dolphin?",opts:["Blue","Gray","White","Black"],ans:1},{q:"Rain clouds are?",opts:["White","Blue","Gray","Black"],ans:2},{q:"Mix black + white =?",opts:["Brown","Blue","Purple","Gray"],ans:3},{q:"What color is a mouse?",opts:["Gray","Brown","White","Black"],ans:0}],
-Rainbow:[{q:"How many colors in a rainbow?",opts:["5","6","7","8"],ans:2},{q:"First color of rainbow?",opts:["Orange","Red","Yellow","Blue"],ans:1},{q:"When do you see a rainbow?",opts:["At night","After rain","In winter","Underground"],ans:1},{q:"Which is NOT a rainbow color?",opts:["Red","Pink","Blue","Green"],ans:1},{q:"Last color of rainbow?",opts:["Blue","Green","Red","Violet"],ans:3}]
+Z:[{q:"What letter does ZEBRA start with?",opts:["S","Z","X","C"],ans:1},{q:"Which word starts with Z?",opts:["Ball","Cat","Dog","Zoo"],ans:3},{q:"Z is for...",opts:["Zero","Ball","Cat","Dog"],ans:0},{q:"Find the letter Z!",opts:["S","N","Z","2"],ans:2},{q:"Z is the ___ letter",opts:["First","Last","Middle","10th"],ans:1}],
+'1':[{q:"How many noses do you have?",opts:["2","1","3","0"],ans:1},{q:"How many suns in the sky?",opts:["1","2","3","4"],ans:0},{q:"How many moons does Earth have?",opts:["0","2","1","3"],ans:2},{q:"What is 1 + 0?",opts:["0","2","1","3"],ans:2},{q:"Show number ONE!",opts:["One finger!","Two fingers","No fingers","Three"],ans:0}],
+'2':[{q:"How many eyes do you have?",opts:["1","2","3","4"],ans:1},{q:"What is 1 + 1?",opts:["1","3","0","2"],ans:3},{q:"Wheels on a bicycle?",opts:["1","3","4","2"],ans:3},{q:"What looks like a swan?",opts:["3","5","2","7"],ans:2},{q:"How many ears?",opts:["1","3","2","4"],ans:2}],
+'3':[{q:"Sides of a triangle?",opts:["4","2","3","5"],ans:2},{q:"What is 1 + 2?",opts:["2","4","3","1"],ans:2},{q:"Little pigs in the story?",opts:["2","3","4","5"],ans:1},{q:"Traffic light colors?",opts:["2","4","3","5"],ans:2},{q:"After 2?",opts:["1","4","3","5"],ans:2}],
+'4':[{q:"Legs on a dog?",opts:["2","3","4","6"],ans:2},{q:"What is 2 + 2?",opts:["3","5","4","6"],ans:2},{q:"Sides of a square?",opts:["3","5","4","6"],ans:2},{q:"Wheels on a car?",opts:["2","3","4","6"],ans:2},{q:"After 3?",opts:["2","5","4","6"],ans:2}],
+'5':[{q:"Fingers on one hand?",opts:["4","5","6","3"],ans:1},{q:"What is 3 + 2?",opts:["4","6","5","7"],ans:2},{q:"Toes on one foot?",opts:["4","6","5","8"],ans:2},{q:"After 4?",opts:["3","6","5","7"],ans:2},{q:"Points on a star?",opts:["4","6","5","3"],ans:2}],
+'6':[{q:"Legs on an insect?",opts:["4","8","6","2"],ans:2},{q:"What is 3 + 3?",opts:["5","7","6","9"],ans:2},{q:"After 5?",opts:["4","7","6","8"],ans:2},{q:"Sides of hexagon?",opts:["5","7","6","8"],ans:2},{q:"What is 4 + 2?",opts:["5","7","6","8"],ans:2}],
+'7':[{q:"Days in a week?",opts:["5","6","7","8"],ans:2},{q:"What is 4 + 3?",opts:["6","8","7","5"],ans:2},{q:"Rainbow colors?",opts:["5","6","7","8"],ans:2},{q:"After 6?",opts:["5","8","7","9"],ans:2},{q:"What is 5 + 2?",opts:["6","8","7","9"],ans:2}],
+'8':[{q:"Legs on a spider?",opts:["6","10","8","4"],ans:2},{q:"What is 4 + 4?",opts:["6","7","8","9"],ans:2},{q:"Octopus legs?",opts:["6","10","8","4"],ans:2},{q:"After 7?",opts:["6","9","8","10"],ans:2},{q:"What is 5 + 3?",opts:["7","9","8","6"],ans:2}],
+'9':[{q:"What is 5 + 4?",opts:["8","7","9","10"],ans:2},{q:"Before 10?",opts:["8","7","9","11"],ans:2},{q:"What is 3 + 6?",opts:["8","7","9","10"],ans:2},{q:"After 8?",opts:["7","10","9","11"],ans:2},{q:"Cat lives?",opts:["7","8","9","10"],ans:2}],
+'10':[{q:"Fingers on both hands?",opts:["8","12","10","6"],ans:2},{q:"What is 5 + 5?",opts:["8","9","10","11"],ans:2},{q:"Total toes?",opts:["8","12","10","6"],ans:2},{q:"After 9?",opts:["8","11","10","12"],ans:2},{q:"Biggest number here?",opts:["8","9","7","10"],ans:3}],
+Red:[{q:"Fire truck color?",opts:["Blue","Red","Green","Yellow"],ans:1},{q:"Strawberry color?",opts:["Orange","Purple","Red","Pink"],ans:2},{q:"Stop sign color?",opts:["Red","Blue","Green","Yellow"],ans:0},{q:"Roses are?",opts:["Blue","Yellow","Green","Red"],ans:3},{q:"Ladybug color?",opts:["Orange","Red","Brown","Pink"],ans:1}],
+Blue:[{q:"Sky color?",opts:["Green","Blue","Red","Yellow"],ans:1},{q:"Ocean color?",opts:["Green","Red","Blue","Gray"],ans:2},{q:"Blueberries are?",opts:["Blue","Red","Purple","Green"],ans:0},{q:"Whale color?",opts:["Red","Green","Gray","Blue"],ans:3},{q:"Ice color?",opts:["White","Blue","Clear","Gray"],ans:1}],
+Green:[{q:"Grass color?",opts:["Blue","Red","Green","Yellow"],ans:2},{q:"Leaves color?",opts:["Green","Blue","Red","Brown"],ans:0},{q:"Frog color?",opts:["Blue","Red","Brown","Green"],ans:3},{q:"Broccoli color?",opts:["Red","Green","Yellow","Orange"],ans:1},{q:"Turtle color?",opts:["Blue","Red","Green","Pink"],ans:2}],
+Yellow:[{q:"Banana color?",opts:["Yellow","Orange","Red","Green"],ans:0},{q:"Sun color?",opts:["Red","Yellow","Orange","White"],ans:1},{q:"Lemon color?",opts:["Orange","Green","Yellow","Red"],ans:2},{q:"Sunflower color?",opts:["Red","Pink","Orange","Yellow"],ans:3},{q:"Baby chick color?",opts:["Yellow","White","Brown","Orange"],ans:0}],
+Orange:[{q:"Orange fruit color?",opts:["Orange","Red","Yellow","Brown"],ans:0},{q:"Carrot color?",opts:["Red","Orange","Yellow","Brown"],ans:1},{q:"Pumpkin color?",opts:["Red","Yellow","Orange","Brown"],ans:2},{q:"Goldfish color?",opts:["Yellow","Red","Gold","Orange"],ans:3},{q:"Red + yellow =?",opts:["Orange","Purple","Green","Brown"],ans:0}],
+Purple:[{q:"Grapes color?",opts:["Purple","Blue","Red","Green"],ans:0},{q:"Red + blue =?",opts:["Green","Purple","Orange","Brown"],ans:1},{q:"Eggplant color?",opts:["Brown","Green","Purple","Blue"],ans:2},{q:"Lavender is?",opts:["Pink","Blue","Yellow","Purple"],ans:3},{q:"Barney color?",opts:["Purple","Blue","Green","Red"],ans:0}],
+Pink:[{q:"Flamingo color?",opts:["Pink","Red","Orange","White"],ans:0},{q:"Red + white =?",opts:["Purple","Pink","Orange","Gray"],ans:1},{q:"Cherry blossoms?",opts:["White","Red","Pink","Purple"],ans:2},{q:"Pig color?",opts:["Brown","White","Gray","Pink"],ans:3},{q:"Cotton candy?",opts:["Pink","White","Yellow","Blue"],ans:0}],
+Black:[{q:"Night sky color?",opts:["Black","Blue","Gray","Purple"],ans:0},{q:"Crow color?",opts:["Brown","Black","Gray","Blue"],ans:1},{q:"Coal color?",opts:["Gray","Brown","Black","White"],ans:2},{q:"Panther color?",opts:["Brown","Gray","Blue","Black"],ans:3},{q:"Ant color?",opts:["Black","Brown","Red","Gray"],ans:0}],
+Brown:[{q:"Chocolate color?",opts:["Brown","Black","Red","Orange"],ans:0},{q:"Bear color?",opts:["Black","Brown","Gray","White"],ans:1},{q:"Mud color?",opts:["Black","Gray","Brown","Red"],ans:2},{q:"Coconut shell?",opts:["Black","White","Gray","Brown"],ans:3},{q:"Tree trunk?",opts:["Brown","Green","Gray","Black"],ans:0}],
+White:[{q:"Snow color?",opts:["White","Blue","Gray","Clear"],ans:0},{q:"Milk color?",opts:["Yellow","White","Cream","Blue"],ans:1},{q:"Cloud color?",opts:["Blue","Gray","White","Yellow"],ans:2},{q:"Polar bear?",opts:["Gray","Brown","Yellow","White"],ans:3},{q:"Cotton color?",opts:["White","Brown","Yellow","Gray"],ans:0}],
+Gray:[{q:"Elephant color?",opts:["Gray","Brown","Blue","Black"],ans:0},{q:"Dolphin color?",opts:["Blue","Gray","White","Black"],ans:1},{q:"Rain clouds?",opts:["White","Blue","Gray","Black"],ans:2},{q:"Black + white =?",opts:["Brown","Blue","Purple","Gray"],ans:3},{q:"Mouse color?",opts:["Gray","Brown","White","Black"],ans:0}],
+Rainbow:[{q:"Rainbow colors count?",opts:["5","6","7","8"],ans:2},{q:"First rainbow color?",opts:["Orange","Red","Yellow","Blue"],ans:1},{q:"When see rainbow?",opts:["Night","After rain","Winter","Underground"],ans:1},{q:"NOT a rainbow color?",opts:["Red","Pink","Blue","Green"],ans:1},{q:"Last rainbow color?",opts:["Blue","Green","Red","Violet"],ans:3}]
 };
+
 var credits=parseInt(localStorage.getItem('pkb_credits')||'0');
 var totalEarned=parseInt(localStorage.getItem('pkb_earned')||'0');
 var soundOn=true,musicOn=false;
-var currentSeries='',currentTopic='',currentCatIdx=0,currentTopicIdx=0;
+var currentSeries='',currentTopic='',currentCatIdx=0;
 var currentQuestions=[],currentQ=0,score=0,missed=[],answers=[];
 var autoTimerInterval=null;
 var passedTopics=JSON.parse(localStorage.getItem('pkb_passed')||'{}');
@@ -428,34 +452,36 @@ var audioCtx=null;
 function initAudio(){if(!audioCtx)audioCtx=new(window.AudioContext||window.webkitAudioContext)();if(audioCtx.state==='suspended')audioCtx.resume();}
 function playSFX(type){if(!soundOn)return;initAudio();var o=audioCtx.createOscillator(),g=audioCtx.createGain();o.connect(g);g.connect(audioCtx.destination);if(type==='correct'){o.frequency.value=660;g.gain.value=0.15;o.type='sine';o.start();o.stop(audioCtx.currentTime+0.15);}if(type==='wrong'){o.frequency.value=200;g.gain.value=0.12;o.type='square';o.start();o.stop(audioCtx.currentTime+0.3);}if(type==='click'){o.frequency.value=880;g.gain.value=0.08;o.type='sine';o.start();o.stop(audioCtx.currentTime+0.05);}if(type==='celebrate'){o.frequency.value=523;g.gain.value=0.12;o.type='sine';o.start();o.stop(audioCtx.currentTime+0.15);setTimeout(function(){initAudio();var o2=audioCtx.createOscillator(),g2=audioCtx.createGain();o2.connect(g2);g2.connect(audioCtx.destination);o2.frequency.value=659;g2.gain.value=0.12;o2.type='sine';o2.start();o2.stop(audioCtx.currentTime+0.15);},150);}}
 document.addEventListener('touchstart',function(){initAudio();},{once:true});
+
 function showPage(id){if(autoTimerInterval){clearInterval(autoTimerInterval);autoTimerInterval=null;}document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});var map={landing:'pageLanding',age:'pageAge',categories:'pageCategories',topics:'pageTopics',choice:'pageChoice',quiz:'pageQuiz',results:'pageResults',rewards:'pageRewards',settings:'pageSettings'};document.getElementById(map[id]).classList.add('active');if(id==='landing'){document.body.classList.add('on-landing');}else{document.body.classList.remove('on-landing');}window.scrollTo(0,0);if(id==='rewards')updateRewards();}
 function addCredits(n){credits+=n;if(n>0)totalEarned+=n;localStorage.setItem('pkb_credits',String(credits));localStorage.setItem('pkb_earned',String(totalEarned));document.getElementById('creditCount').textContent=credits;}
 function selectAge(age){localStorage.setItem('pkb_age',age);playSFX('click');showPage('categories');buildCategories();}
 function scrollTopics(dir){var el=document.getElementById('thumbGrid');var max=el.scrollWidth-el.clientWidth;if(dir===1&&el.scrollLeft>=max-10){el.scrollTo({left:0,behavior:'smooth'});}else if(dir===-1&&el.scrollLeft<=10){el.scrollTo({left:max,behavior:'smooth'});}else{el.scrollBy({left:dir*150,behavior:'smooth'});}}
-function buildCategories(){var grid=document.getElementById('catGrid');grid.innerHTML='';categories.forEach(function(cat,i){var card=document.createElement('div');card.className='cat-card'+(cat.ready?'':' locked');card.innerHTML='<div class="emoji">'+cat.icon+'</div><div class="label">'+cat.name+'</div><div class="count">'+cat.topics.length+' topics</div>'+(cat.ready?'':'<div class="lock-icon">🔒</div>');card.onclick=function(){if(cat.ready){currentCatIdx=i;playSFX('click');openTopics(cat.id);}else{alert('Coming soon! 🐿');}};grid.appendChild(card);});}
+function buildCategories(){var grid=document.getElementById('catGrid');grid.innerHTML='';categories.forEach(function(cat,i){var card=document.createElement('div');card.className='cat-card '+catColors[i%catColors.length]+(cat.ready?'':' locked');card.innerHTML='<div class="emoji">'+cat.icon+'</div><div class="label">'+cat.name+'</div><div class="count">'+cat.topics.length+' topics</div>'+(cat.ready?'':'<div class="lock-icon">🔒</div>');card.onclick=function(){if(cat.ready){currentCatIdx=i;playSFX('click');openTopics(cat.id);}};grid.appendChild(card);});}
 buildCategories();
-function openTopics(catId){currentSeries=catId;var cat=categories.find(function(c){return c.id===catId;});document.getElementById('topicsTitle').textContent=cat.name;var done=passedTopics[catId]||[];document.getElementById('topicsProgress').textContent=done.length+' of '+cat.topics.length+' completed';var grid=document.getElementById('thumbGrid');grid.innerHTML='';cat.topics.forEach(function(topic,idx){var card=document.createElement('div');card.className='thumb-card';var isDone=done.indexOf(topic)!==-1;var isFree=idx<3;var isLocked=!isFree&&credits<10&&!isDone;if(isDone)card.classList.add('done');if(isLocked)card.classList.add('locked');var thumbPath=catId+'/'+topic.toLowerCase().replace(/[^a-z0-9]/g,'')+'.jpg';card.innerHTML='<img src="'+thumbPath+'" alt="'+topic+'" onerror="this.style.background=\'linear-gradient(135deg,#e0d4ea,#c8e8f8)\';this.style.height=\'100px\';"><div class="thumb-label">'+topic+'</div>'+(isLocked?'<div class="lock-badge">🔒</div>':'');card.onclick=function(){if(isLocked){pendingUnlockTopic=topic;pendingUnlockSeries=catId;document.getElementById('unlockCreditsBtn').style.display=credits>=10?'inline-block':'none';document.getElementById('unlockPopup').classList.add('show');return;}playSFX('click');currentTopic=topic;currentTopicIdx=idx;openChoice(catId,topic);};grid.appendChild(card);});showPage('topics');}
+
+function openTopics(catId){currentSeries=catId;var cat=categories.find(function(c){return c.id===catId;});document.getElementById('topicsTitle').textContent=cat.name;var done=passedTopics[catId]||[];document.getElementById('topicsProgress').textContent=done.length+' of '+cat.topics.length+' completed';var grid=document.getElementById('thumbGrid');grid.innerHTML='';cat.topics.forEach(function(topic,idx){var card=document.createElement('div');card.className='thumb-card';var isDone=done.indexOf(topic)!==-1;var isFree=idx<3;var isLocked=!isFree&&!isDone;if(isDone)card.classList.add('done');if(isLocked)card.classList.add('locked');var thumbPath=catId+'/'+topic.toLowerCase().replace(/[^a-z0-9]/g,'')+'.jpg';card.innerHTML='<img src="'+thumbPath+'" alt="'+topic+'" onerror="this.style.background=\'linear-gradient(135deg,#e0d4ea,#c8e8f8)\';this.style.height=\'100px\';"><div class="thumb-label">'+topic+'</div>'+(isLocked?'<div class="lock-badge">🔒</div>':'');card.onclick=function(){if(isLocked){pendingUnlockTopic=topic;pendingUnlockSeries=catId;document.getElementById('unlockCreditsBtn').style.display=credits>=10?'inline-block':'none';document.getElementById('unlockPopup').classList.add('show');return;}playSFX('click');currentTopic=topic;openChoice(catId,topic);};grid.appendChild(card);});showPage('topics');}
 function shareToUnlock(){shareWebsite();setTimeout(function(){closePopup('unlockPopup');if(pendingUnlockTopic){currentTopic=pendingUnlockTopic;openChoice(pendingUnlockSeries,pendingUnlockTopic);pendingUnlockTopic=null;}},1000);}
 function unlockWithCredits(){if(credits>=10){addCredits(-10);closePopup('unlockPopup');if(pendingUnlockTopic){currentTopic=pendingUnlockTopic;openChoice(pendingUnlockSeries,pendingUnlockTopic);pendingUnlockTopic=null;}}}
-/* Subscribe return detection for unlock */
 document.addEventListener('visibilitychange',function(){if(!document.hidden&&pendingUnlockTopic&&document.getElementById('unlockPopup').classList.contains('show')){setTimeout(function(){closePopup('unlockPopup');currentTopic=pendingUnlockTopic;openChoice(pendingUnlockSeries,pendingUnlockTopic);pendingUnlockTopic=null;},500);}});
-function openChoice(catId,topic){document.getElementById('choiceTitle').textContent=topic;document.getElementById('choiceTopicName').textContent=topic;document.getElementById('choiceThumb').src=catId+'/'+topic.toLowerCase().replace(/[^a-z0-9]/g,'')+'.jpg';showPage('choice');}
+function openChoice(catId,topic){document.getElementById('choiceTopicName').textContent=topic;document.getElementById('choiceThumb').src=catId+'/'+topic.toLowerCase().replace(/[^a-z0-9]/g,'')+'.jpg';showPage('choice');}
 function getTopicYT(){if(ytIDs.abc[currentTopic])return ytIDs.abc[currentTopic];if(ytIDs.numbers[currentTopic])return ytIDs.numbers[currentTopic];if(ytIDs.colors[currentTopic])return ytIDs.colors[currentTopic];return null;}
 function startQuiz(){var bank=quizBank[currentTopic];if(!bank||bank.length===0)bank=getGenericQuiz(currentTopic);var yt=getTopicYT();var shuffled=bank.slice().sort(function(){return Math.random()-0.5;});currentQuestions=shuffled.slice(0,5);currentQuestions.forEach(function(q){q.yt=yt;});currentQ=0;score=0;missed=[];answers=new Array(currentQuestions.length).fill(null);document.getElementById('quizTitle').textContent=currentTopic+' Quiz';showPage('quiz');loadQuestion();}
-function getGenericQuiz(topic){return[{q:"What did you learn about "+topic+"?",opts:["A lot!","Some things","Need to watch again","Everything!"],ans:3},{q:topic+" is fun to learn!",opts:["True!","Very true!","Super true!","All of these!"],ans:3},{q:"Do you want to learn more about "+topic+"?",opts:["Yes please!","Of course!","Always!","All of these!"],ans:3},{q:"You are a "+topic+" expert now!",opts:["Not yet","Getting there","Almost!","Yes I am!"],ans:3},{q:"What is your favorite thing about "+topic+"?",opts:["Everything!","The colors","The sounds","All of it!"],ans:0}];}
-function loadQuestion(){if(autoTimerInterval){clearInterval(autoTimerInterval);autoTimerInterval=null;}var total=currentQuestions.length;var q=currentQuestions[currentQ];document.getElementById('questionNum').textContent=(currentQ+1)+' of '+total;document.getElementById('progressFill').style.width=((currentQ+1)/total*100)+'%';document.getElementById('questionText').textContent=q.q;document.getElementById('autoTimer').textContent='';document.getElementById('quizNextBtn').disabled=answers[currentQ]===null;document.getElementById('quizVideoSide').style.display='none';document.getElementById('quizVid').src='videos/think.mp4';var grid=document.getElementById('answersGrid');grid.innerHTML='';if(answers[currentQ]!==null){q.opts.forEach(function(opt,i){var btn=document.createElement('button');btn.className='answer-btn disabled';btn.textContent=opt;if(i===q.ans)btn.classList.add('correct');if(answers[currentQ]===i&&i!==q.ans)btn.classList.add('wrong');grid.appendChild(btn);});if(answers[currentQ]===q.ans){document.getElementById('quizVid').src='videos/correct.mp4';}else{document.getElementById('quizVid').src='videos/wrong.mp4';if(q.yt){document.getElementById('quizVideoSide').style.display='block';document.getElementById('quizYTContainer').innerHTML='<iframe src="https://www.youtube.com/embed/'+q.yt+'?rel=0&enablejsapi=1" allowfullscreen style="width:100%;height:200px;border:none;border-radius:16px;"></iframe>';}}return;}q.opts.forEach(function(opt,i){var btn=document.createElement('button');btn.className='answer-btn';btn.textContent=opt;btn.onclick=function(){checkAnswer(i,btn);};grid.appendChild(btn);});}
+function getGenericQuiz(topic){return[{q:"What did you learn about "+topic+"?",opts:["A lot!","Some things","Watch again","Everything!"],ans:3},{q:topic+" is fun!",opts:["True!","Very true!","Super true!","All!"],ans:3},{q:"Learn more about "+topic+"?",opts:["Yes!","Of course!","Always!","All!"],ans:3},{q:"You're a "+topic+" expert!",opts:["Not yet","Getting there","Almost!","Yes!"],ans:3},{q:"Favorite thing about "+topic+"?",opts:["Everything!","Colors","Sounds","All!"],ans:0}];}
+var ansColors=['a0','a1','a2','a3'];
+function loadQuestion(){if(autoTimerInterval){clearInterval(autoTimerInterval);autoTimerInterval=null;}var total=currentQuestions.length;var q=currentQuestions[currentQ];document.getElementById('questionNum').textContent=(currentQ+1)+' of '+total;document.getElementById('progressFill').style.width=((currentQ+1)/total*100)+'%';document.getElementById('questionText').textContent=q.q;document.getElementById('autoTimer').textContent='';document.getElementById('quizNextBtn').style.opacity=answers[currentQ]===null?'0.4':'1';document.getElementById('quizVideoSide').style.display='none';document.getElementById('quizVid').src='videos/think.mp4';var grid=document.getElementById('answersGrid');grid.innerHTML='';if(answers[currentQ]!==null){q.opts.forEach(function(opt,i){var btn=document.createElement('button');btn.className='answer-btn '+ansColors[i]+' disabled';btn.textContent=opt;if(i===q.ans)btn.classList.add('correct');if(answers[currentQ]===i&&i!==q.ans)btn.classList.add('wrong');grid.appendChild(btn);});document.getElementById('quizVid').src=answers[currentQ]===q.ans?'videos/correct.mp4':'videos/wrong.mp4';if(answers[currentQ]!==q.ans&&q.yt){document.getElementById('quizVideoSide').style.display='block';document.getElementById('quizYTContainer').innerHTML='<iframe src="https://www.youtube.com/embed/'+q.yt+'?rel=0" allowfullscreen></iframe>';}return;}q.opts.forEach(function(opt,i){var btn=document.createElement('button');btn.className='answer-btn '+ansColors[i];btn.textContent=opt;btn.onclick=function(){checkAnswer(i,btn);};grid.appendChild(btn);});}
 var cheers=['Amazing!','Super!','Wow!','Great Job!','You Rock!','Brilliant!','Correct!','Yes!','Smart!','Perfect!'];
 var cheerEmojis=['🌟','⭐','🎉','💪','🐿️','✨','🏆','🥇','🧠','💛'];
 var cheerColors=['#a8d4bc','#f5d4a0','#f4b8c4','#5bb8d4','#c8b8d8','#f4b8c4','#a8d4bc','#f5d4a0','#5bbcd4','#f4b8c4'];
-function showMiniCheer(){var i=Math.floor(Math.random()*cheers.length);var div=document.createElement('div');div.innerHTML='<img src="'+SQ+'" style="width:60px;border-radius:50%;"><div style="font-size:32px;margin:4px 0;">'+cheerEmojis[i]+'</div><div style="font-family:Baloo 2,cursive;font-size:24px;color:'+cheerColors[i]+';">'+cheers[i]+'</div><div style="font-size:12px;color:#ccc;margin-top:4px;">+2 🐿️</div>';div.style.cssText='position:fixed;top:20%;left:50%;transform:translateX(-50%);background:rgba(255,255,255,0.95);padding:20px 32px;border-radius:28px;text-align:center;z-index:300;box-shadow:0 8px 30px rgba(0,0,0,0.15);animation:popIn 0.4s ease-out;border:3px solid '+cheerColors[i]+';';document.body.appendChild(div);setTimeout(function(){div.style.transition='all 0.3s';div.style.opacity='0';div.style.transform='translateX(-50%) translateY(-20px)';setTimeout(function(){div.remove();},300);},1500);}
-function checkAnswer(idx,btn){var q=currentQuestions[currentQ];document.querySelectorAll('.answer-btn').forEach(function(b){b.classList.add('disabled');});answers[currentQ]=idx;if(idx===q.ans){btn.classList.add('correct');score++;playSFX('correct');launchConfetti();showMiniCheer();document.getElementById('quizVid').src='videos/correct.mp4';addCredits(2);}else{btn.classList.add('wrong');document.querySelectorAll('.answer-btn')[q.ans].classList.add('correct');missed.push(q);playSFX('wrong');document.getElementById('quizVid').src='videos/wrong.mp4';if(q.yt){document.getElementById('quizVideoSide').style.display='block';document.getElementById('quizYTContainer').innerHTML='<iframe src="https://www.youtube.com/embed/'+q.yt+'?rel=0&enablejsapi=1" allowfullscreen style="width:100%;height:200px;border:none;border-radius:16px;"></iframe>';}}document.getElementById('quizNextBtn').disabled=false;if(currentQ===2&&!localStorage.getItem('pkb_subShown')){setTimeout(function(){document.getElementById('subPopup').classList.add('show');localStorage.setItem('pkb_subShown','true');},1500);}var cd=idx===q.ans?3:5;document.getElementById('autoTimer').textContent='Next in '+cd+'s...';autoTimerInterval=setInterval(function(){cd--;if(cd<=0){clearInterval(autoTimerInterval);autoTimerInterval=null;document.getElementById('autoTimer').textContent='';nextQuestion();}else{document.getElementById('autoTimer').textContent='Next in '+cd+'s...';}},1000);}
+function showMiniCheer(){var i=Math.floor(Math.random()*cheers.length);var div=document.createElement('div');div.innerHTML='<div style="font-size:32px;margin:4px 0;">'+cheerEmojis[i]+'</div><div style="font-family:Baloo 2,cursive;font-size:24px;color:'+cheerColors[i]+';">'+cheers[i]+'</div><div style="font-size:12px;color:#ccc;margin-top:4px;">+2 🐿️</div>';div.style.cssText='position:fixed;top:20%;left:50%;transform:translateX(-50%);background:rgba(255,255,255,0.95);padding:20px 32px;border-radius:28px;text-align:center;z-index:300;box-shadow:0 8px 30px rgba(0,0,0,0.15);animation:popIn 0.4s ease-out;border:3px solid '+cheerColors[i]+';';document.body.appendChild(div);setTimeout(function(){div.style.transition='all 0.3s';div.style.opacity='0';div.style.transform='translateX(-50%) translateY(-20px)';setTimeout(function(){div.remove();},300);},1500);}
+function checkAnswer(idx,btn){var q=currentQuestions[currentQ];document.querySelectorAll('.answer-btn').forEach(function(b){b.classList.add('disabled');});answers[currentQ]=idx;if(idx===q.ans){btn.classList.add('correct');score++;playSFX('correct');launchConfetti();showMiniCheer();document.getElementById('quizVid').src='videos/correct.mp4';addCredits(2);}else{btn.classList.add('wrong');document.querySelectorAll('.answer-btn')[q.ans].classList.add('correct');missed.push(q);playSFX('wrong');document.getElementById('quizVid').src='videos/wrong.mp4';if(q.yt){document.getElementById('quizVideoSide').style.display='block';document.getElementById('quizYTContainer').innerHTML='<iframe src="https://www.youtube.com/embed/'+q.yt+'?rel=0" allowfullscreen></iframe>';}}document.getElementById('quizNextBtn').style.opacity='1';if(currentQ===2&&!localStorage.getItem('pkb_subShown')){setTimeout(function(){document.getElementById('subPopup').classList.add('show');localStorage.setItem('pkb_subShown','true');},1500);}var cd=idx===q.ans?3:5;document.getElementById('autoTimer').textContent='Next in '+cd+'s...';autoTimerInterval=setInterval(function(){cd--;if(cd<=0){clearInterval(autoTimerInterval);autoTimerInterval=null;document.getElementById('autoTimer').textContent='';nextQuestion();}else{document.getElementById('autoTimer').textContent='Next in '+cd+'s...';}},1000);}
 function quizGoBack(){if(autoTimerInterval){clearInterval(autoTimerInterval);autoTimerInterval=null;}openChoice(currentSeries,currentTopic);}
 function nextQuestion(){if(autoTimerInterval){clearInterval(autoTimerInterval);autoTimerInterval=null;}if(currentQ>=currentQuestions.length-1){showResults();return;}currentQ++;loadQuestion();}
 function showResults(){if(autoTimerInterval){clearInterval(autoTimerInterval);autoTimerInterval=null;}var total=currentQuestions.length;var passed=score>=3;var titles=['Keep Trying! 💪','Nice Try! 👍','Good Job! 😊','Great Work! 🌟','Amazing! 🎉','Perfect! 🏆'];document.getElementById('resultsTitle').textContent=titles[score]||titles[5];document.getElementById('resultsScore').textContent=score+'/'+total;document.getElementById('resultsCredits').textContent='+'+score*2+' 🐿';var badge=document.getElementById('passBadge');var rv=document.getElementById('resultsVid');if(passed){badge.textContent='PASSED ✅';badge.className='pass-badge passed';document.getElementById('resultsMsg').textContent='Episode complete!';if(!passedTopics[currentSeries])passedTopics[currentSeries]=[];if(passedTopics[currentSeries].indexOf(currentTopic)===-1){passedTopics[currentSeries].push(currentTopic);localStorage.setItem('pkb_passed',JSON.stringify(passedTopics));}playSFX('celebrate');launchConfetti();rv.src=score===5?'videos/celebrate.mp4':'videos/cheer.mp4';}else{badge.textContent='TRY AGAIN (need 3/5)';badge.className='pass-badge failed';document.getElementById('resultsMsg').textContent='Watch videos and try again!';rv.src='videos/sad.mp4';}var ms=document.getElementById('missedSection'),mv=document.getElementById('missedVideos');if(missed.length>0){ms.style.display='block';mv.innerHTML='';missed.forEach(function(m){if(m.yt){mv.innerHTML+='<div class="missed-video"><p>'+m.q+'</p><iframe src="https://www.youtube.com/embed/'+m.yt+'?rel=0" allowfullscreen></iframe></div>';}});}else{ms.style.display='none';}showPage('results');}
 function retryQuiz(){startQuiz();}
 function toggleSFX(el){soundOn=!soundOn;el.classList.toggle('on');}
 function toggleMusic(el){initAudio();musicOn=!musicOn;el.classList.toggle('on');}
-function resetProgress(){if(confirm('Reset all progress? This cannot be undone!')){localStorage.clear();location.reload();}}
+function resetProgress(){if(confirm('Reset all progress?')){localStorage.clear();location.reload();}}
 function updateRewards(){document.getElementById('rewardsTotal').textContent=credits;document.getElementById('rewardsStreak').textContent='Day '+(localStorage.getItem('pkb_streak')||'0');document.getElementById('rewardsEarned').textContent=totalEarned+' 🐿';var total=0;Object.values(passedTopics).forEach(function(arr){total+=arr.length;});document.getElementById('rewardsDone').textContent=total;}
 function shareWebsite(){var url='https://playkidsbright.github.io';if(navigator.share){navigator.share({title:'Play Kids Bright',text:'Fun learning for kids! 🐿',url:url});}else{navigator.clipboard.writeText(url);alert('Link copied! 🎉');}}
 function checkDaily(){var today=new Date().toDateString(),last=localStorage.getItem('pkb_lastVisit');if(last!==today){var y=new Date();y.setDate(y.getDate()-1);var s=parseInt(localStorage.getItem('pkb_streak')||'0');var ns=(last===y.toDateString())?s+1:1;if(ns>7)ns=1;localStorage.setItem('pkb_streak',String(ns));document.getElementById('streakDay').textContent=ns;document.getElementById('dailyPopup').classList.add('show');}}
