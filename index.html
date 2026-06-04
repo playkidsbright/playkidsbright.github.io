@@ -197,6 +197,180 @@ body{font-family:'Nunito',sans-serif;overflow-x:hidden;background:#d4eef8;}
 @media(min-width:480px){.age-grid,.cat-grid{max-width:400px;margin:0 auto;}}
 </style>
 </head>
+<body>
+<div class="clouds" id="clouds"></div>
+<div class="stars-container" id="stars"></div>
+<div class="confetti-container" id="confetti"></div>
+<div class="correct-popup" id="correctPopup"><h3>⭐ Correct! +2🐿</h3><p>Amazing job!</p></div>
+<!-- UNLOCK POPUP -->
+<div class="popup-overlay" id="unlockPopup">
+  <div class="popup-box">
+    <h3>🔒 Topic Locked</h3>
+    <p>Unlock this topic to continue learning!</p>
+    <div class="squirrel-sm" style="margin:0 auto 16px;width:80px;height:80px;">
+      <video autoplay loop muted playsinline><source src="videos/point.mp4" type="video/mp4"></video>
+    </div>
+    <div class="popup-options">
+      <button class="popup-opt opt-subscribe" onclick="unlockSubscribe()">🔔 Subscribe to Unlock FREE</button>
+      <button class="popup-opt opt-share" onclick="unlockShare()">📤 Share to Unlock FREE</button>
+      <button class="popup-opt opt-credits" onclick="unlockCredits()">🐿 Use 10 Credits to Unlock</button>
+      <button class="popup-opt opt-later" onclick="closeUnlockPopup()">🔮 Maybe Later</button>
+    </div>
+  </div>
+</div>
+<!-- SUBSCRIBE POPUP -->
+<div class="popup-overlay sub-popup" id="subPopup">
+  <div class="popup-box">
+    <h3>🔔 Enjoying PlayKidsBright?</h3>
+    <p>Subscribe for new games every week! 🎉</p>
+    <div class="squirrel-sm" style="margin:0 auto 12px;width:80px;height:80px;">
+      <video autoplay loop muted playsinline><source src="videos/thumbsup.mp4" type="video/mp4"></video>
+    </div>
+    <div class="sub-actions">
+      <button class="btn-sub-yes" onclick="goSubscribe()">🔔 Subscribe + 👍 Like</button>
+      <button class="btn-sub-later" onclick="closeSubPopup()">🔮 Maybe Later</button>
+    </div>
+  </div>
+</div>
+<!-- TOP BAR -->
+<div class="topbar" id="topbar" style="display:none;">
+  <a class="topbar-logo" onclick="goPage('landing')">
+    <img src="https://res.cloudinary.com/dzkwltgyd/image/upload/v1779628059/glifchat-image-input-production/pyqpq8vyynps308i4a0j.png" alt="Logo">
+    <span>Home</span>
+  </a>
+  <div class="topbar-right">
+    <div class="topbar-sm">
+      <a href="https://youtube.com/@playkidsbright" target="_blank" style="color:#FF0000;"><i class="fab fa-youtube"></i></a>
+      <a href="https://instagram.com/playkidsbright" target="_blank" style="color:#E1306C;"><i class="fab fa-instagram"></i></a>
+      <a href="https://facebook.com/playkidsbright" target="_blank" style="color:#1877F2;"><i class="fab fa-facebook"></i></a>
+    </div>
+    <div class="credits-badge">🐿 <span id="creditsCount">0</span></div>
+  </div>
+</div>
+<!-- PAGE 1 LANDING -->
+<div class="page active" id="page-landing">
+  <div class="landing-content">
+    <div class="landing-title">
+      <div class="t1"><span class="title-letter">P</span><span class="title-letter">l</span><span class="title-letter">a</span><span class="title-letter">y</span></div>
+      <div class="t2"><span class="title-letter">K</span><span class="title-letter">i</span><span class="title-letter">d</span><span class="title-letter">s</span><span class="title-letter"> </span><span class="title-letter">B</span><span class="title-letter">r</span><span class="title-letter">i</span><span class="title-letter">g</span><span class="title-letter">h</span><span class="title-letter">t</span></div>
+    </div>
+    <div class="squirrel-box">
+      <video autoplay loop muted playsinline><source src="videos/wave.mp4" type="video/mp4"></video>
+    </div>
+    <p class="tagline">🌟 Play, Learn & Shine Bright!</p>
+    <div class="stats-bar">
+      <div class="stat-pill"><span class="sn">26</span><span class="sl"> ABCs</span></div>
+      <div class="stat-pill"><span class="sn">10</span><span class="sl"> Numbers</span></div>
+      <div class="stat-pill"><span class="sn">12</span><span class="sl"> Colors</span></div>
+      <div class="stat-pill"><span class="sn">✨</span><span class="sl"> FREE!</span></div>
+    </div>
+    <div class="sm-icons">
+      <a href="https://youtube.com/@playkidsbright" target="_blank" class="sm-yt"><i class="fab fa-youtube"></i></a>
+      <a href="https://instagram.com/playkidsbright" target="_blank" class="sm-ig"><i class="fab fa-instagram"></i></a>
+      <a href="https://facebook.com/playkidsbright" target="_blank" class="sm-fb"><i class="fab fa-facebook"></i></a>
+      <a href="https://in.pinterest.com/playkidsbright" target="_blank" class="sm-pin"><i class="fab fa-pinterest"></i></a>
+      <a href="https://threads.com/@playkidsbright" target="_blank" class="sm-th"><i class="fab fa-threads"></i></a>
+      <a href="https://x.com/playkidsbright" target="_blank" class="sm-x"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://wa.me/?text=🌟%20Play%20Kids%20Bright%20-%20Free%20kids%20learning!%20https://playkidsbright.github.io" target="_blank" class="sm-wa"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <button class="play-btn" onclick="goPage('age')"><i class="fas fa-play"></i></button>
+    <div class="play-btn-label">PLAY FREE!</div>
+    <div class="action-btns">
+      <button class="btn-share" onclick="shareApp()">📤 Share</button>
+      <button class="btn-subscribe" onclick="goSubscribe()">🔔 Subscribe</button>
+    </div>
+  </div>
+</div>
+<!-- PAGE 2 AGE -->
+<div class="page" id="page-age">
+  <h2 class="page-title">How Old Are You? 🎈</h2>
+  <div class="age-grid">
+    <div class="age-card age-card-1" onclick="selectAge('3-5')"><div class="emoji">🧸</div><div class="range">3 - 5</div><div class="desc">Tiny Explorers</div></div>
+    <div class="age-card age-card-2" onclick="selectAge('6-8')"><div class="emoji">🎨</div><div class="range">6 - 8</div><div class="desc">Fun Learners</div></div>
+    <div class="age-card age-card-3" onclick="selectAge('9-11')"><div class="emoji">🔬</div><div class="range">9 - 11</div><div class="desc">Young Thinkers</div></div>
+    <div class="age-card age-card-4" onclick="selectAge('12-13')"><div class="emoji">🚀</div><div class="range">12 - 13</div><div class="desc">Smart Teens</div></div>
+  </div>
+  <div class="squirrel-bottom"><div class="squirrel-sm"><video autoplay loop muted playsinline><source src="videos/think.mp4" type="video/mp4"></video></div></div>
+  <button class="back-btn" onclick="goPage('landing')">← Back</button>
+</div>
+<!-- PAGE 3 CATEGORIES -->
+<div class="page" id="page-categories">
+  <h2 class="page-title">Pick a Category! 🎯</h2>
+  <div class="squirrel-bottom" style="margin-bottom:8px;"><div class="squirrel-sm" style="width:80px;height:80px;"><video autoplay loop muted playsinline><source src="videos/idle.mp4" type="video/mp4"></video></div></div>
+  <div class="cat-grid" id="catGrid"></div>
+  <button class="back-btn" onclick="goPage('age')">← Back</button>
+</div>
+<!-- PAGE 4 TOPICS -->
+<div class="page" id="page-topics">
+  <h2 class="page-title" id="topicsTitle">Topics 📚</h2>
+  <div class="progress-info" id="progressInfo">0 / 0 completed</div>
+  <div class="topics-scroll-wrap">
+    <button class="scroll-arrow scroll-left" onclick="scrollTopics(-1)">‹</button>
+    <div class="topics-scroll" id="topicsScroll"></div>
+    <button class="scroll-arrow scroll-right" onclick="scrollTopics(1)">›</button>
+  </div>
+  <div class="squirrel-bottom"><div class="squirrel-sm"><video autoplay loop muted playsinline><source src="videos/idle.mp4" type="video/mp4"></video></div></div>
+  <button class="back-btn" onclick="goPage('categories')">← Back</button>
+</div>
+<!-- PAGE 5 QUIZ -->
+<div class="page" id="page-quiz">
+  <div class="quiz-progress"><div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div><div class="progress-text" id="progressText">Question 1 of 5</div></div>
+  <div class="quiz-question-card" id="quizQuestion">Loading...</div>
+  <div class="quiz-answers" id="quizAnswers"></div>
+  <div class="squirrel-bottom"><div class="squirrel-sm" id="quizSqBox"><video autoplay loop muted playsinline id="quizSqVid"><source src="videos/think.mp4" type="video/mp4"></video></div></div>
+  <div class="quiz-video-embed" id="quizVideoEmbed"><iframe id="quizVideoFrame" allowfullscreen allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"></iframe></div>
+  <div class="quiz-nav">
+    <button class="btn-back-quiz" onclick="goPage('topics')">← Back</button>
+    <button class="btn-next-quiz" id="nextBtn" onclick="nextQuestion()" style="display:none;">Next →</button>
+  </div>
+</div>
+<!-- PAGE 6 RESULTS -->
+<div class="page" id="page-results">
+  <div class="results-score">
+    <div class="score-circle"><div class="score-number" id="resultScore">0</div><div class="score-total">out of 5</div></div>
+    <div id="resultBadge"></div>
+    <div class="credits-earned" id="resultCredits"></div>
+    <div class="squirrel-bottom"><div class="squirrel-sm"><video autoplay loop muted playsinline id="resultSqVid"><source src="videos/cheer.mp4" type="video/mp4"></video></div></div>
+  </div>
+  <div class="certificate-box" id="certificateBox"><h3>🎓 Certificate Earned!</h3><p id="certText">You completed all topics!</p></div>
+  <div id="missedVideos" style="padding:0 16px;"></div>
+  <div class="results-nav">
+    <button class="btn-retry" onclick="retryQuiz()">🔄 Try Again</button>
+    <button class="btn-series" onclick="goPage('topics')">📚 Back to Topics</button>
+    <button class="btn-home-res" onclick="goPage('landing')">🏠 Home</button>
+  </div>
+</div>
+<!-- PAGE 7 REWARDS -->
+<div class="page" id="page-rewards">
+  <h2 class="page-title">🏆 My Rewards</h2>
+  <div class="squirrel-bottom"><div class="squirrel-sm"><video autoplay loop muted playsinline><source src="videos/gift.mp4" type="video/mp4"></video></div></div>
+  <div class="rewards-content">
+    <div class="rewards-stat"><div class="stat-value" id="rwCredits">0</div><div class="stat-label">🐿 Total Credits</div></div>
+    <div class="rewards-stat"><div class="stat-value" id="rwEpisodes">0</div><div class="stat-label">📚 Episodes Completed</div></div>
+    <div class="rewards-stat"><div class="stat-value" id="rwStreak">0</div><div class="stat-label">📅 Day Streak</div></div>
+  </div>
+</div>
+<!-- PAGE 8 SETTINGS -->
+<div class="page" id="page-settings">
+  <h2 class="page-title">⚙ Settings</h2>
+  <div class="squirrel-bottom"><div class="squirrel-sm"><video autoplay loop muted playsinline><source src="videos/idle.mp4" type="video/mp4"></video></div></div>
+  <div class="settings-content">
+    <div class="setting-row"><span class="setting-label">🔊 Sound Effects</span><button class="toggle on" id="soundToggle" onclick="toggleSetting('sound')"></button></div>
+    <div class="setting-row"><span class="setting-label">🎵 Background Music</span><button class="toggle on" id="musicToggle" onclick="toggleSetting('music')"></button></div>
+    <button class="btn-reset" onclick="resetProgress()">🗑 Reset My Progress</button>
+  </div>
+</div>
+<!-- BOTTOM BAR -->
+<div class="bottombar" id="bottombar" style="display:none;">
+  <div class="bottombar-brand"><span>P</span><span>l</span><span>a</span><span>y</span>&nbsp;<span>K</span><span>i</span><span>d</span><span>s</span>&nbsp;<span>B</span><span>r</span><span>i</span><span>g</span><span>h</span><span>t</span></div>
+  <div class="bottombar-nav">
+    <button onclick="window.open('https://youtube.com/@playkidsbright','_blank')"><i class="fab fa-youtube" style="color:#FF0000;"></i><span>YouTube</span></button>
+    <button onclick="goPage('rewards')"><i class="fas fa-trophy" style="color:#f5c97a;"></i><span>Rewards</span></button>
+    <button class="home-btn" onclick="goPage('landing')"><i class="fas fa-home"></i></button>
+    <button onclick="goPage('settings')"><i class="fas fa-cog" style="color:#c9b8e8;"></i><span>Settings</span></button>
+    <button onclick="shareApp()"><i class="fas fa-share-alt" style="color:#7bb8d4;"></i><span>Share</span></button>
+  </div>
+</div>
 <script>
 const CATEGORIES={
   'abc':{name:'ABC & Phonics',emoji:'🔤',color:'linear-gradient(135deg,#d4f0e8,#b8e8d4)',ages:['3-5']},
